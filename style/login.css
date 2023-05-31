@@ -12,9 +12,9 @@ body{
     background-repeat: no-repeat;
 }
 header{
-    margin-top: 238px;
+    margin-top: 24vh;
 }
-main,header,section,form,footer{
+main,header,figure,section,form,footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +24,10 @@ main,header,section,form,footer{
 }
 section{
     width: 100%;
+}
+.logo{
+    width: 90%;
+    max-width: 295px;
 }
 
 
@@ -35,27 +39,38 @@ section{
     gap: 5px;
 }
 
-
-p{
+.inputAlt{
     font-weight:600;
     margin-bottom: 5px;
+    font-size: 18px;
+}
+span,p{
+    font-weight:600;
 }
 
-span p{
-    margin-top: 50px;
+.lightP{
     font-weight: 300;
-    position: relative;
-    margin-bottom: -20px;
+    text-align: center;
+    font-size: 18px;
 }
-
+.googleAlt{
+    font-weight: 400;
+    text-align: center;
+    font-size: 15px;
+}
+form{
+    width: 90%;
+    max-width: 350px;
+}
 input{
     width: 100%;
     max-width: 350px;
+    padding: 0 10px;
     height: 65px;
     background: #FAFAFA;
     border: 0.5px solid #D8D8D8;
     border-radius: 12px;
-    margin: 0 auto ;
+    margin: 0 auto;
 }
 .formDiv{
     width: 100%;
@@ -64,27 +79,36 @@ input{
 
 
 .login-btn{
-    background: #0081C9;
+    background: #006297;
     border: 0.5px solid #D8D8D8;
     border-radius: 20px;
-    width: 270px;
+    width: 90%;
+    max-width: 270px;
     height: 60px;
     margin: 0 auto;
     color: #FFFFFF;
     font-weight: bold;
 
 }
-
+.googleCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .login-google{
     display: flex;
-    width: 270px;
+    align-items: center;
+    justify-content: center;
+
+    width: 90%;
+    max-width: 270px;
     height: 60px;
+
     background: #FFFFFF;
     border: 1px solid #03447C;
     border-radius: 20px;
     color: #003E74;
-    align-items: center;
-    justify-content: center;
+
     gap: 1rem;
     font-weight: 500;
 }
@@ -92,7 +116,9 @@ input{
 button{
     font-size: 14pt;
 }
-
+footer{
+    margin-bottom: 10px;
+}
 @keyframes changeColor {
     from {background-color: #035AA6;}
     to {background-color: #fff;}
@@ -103,5 +129,40 @@ button{
     }
     100% {
       opacity: 1;
+    }
+  }
+  @media only screen and (max-device-height: 800px) {
+    header{
+        margin-top: 15vh;
+    }
+  }
+  @media only screen and (max-device-height: 700px) {
+    header{
+        margin-top: 8vh;
+    }
+  }
+  @media only screen and (max-width: 300px) {
+    .inputAlt{
+        font-weight:600;
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+    span,p{
+        font-weight:600;
+        margin-bottom: 5px;
+    }
+    
+    .lightP{
+        font-weight: 300;
+        text-align: center;
+        font-size: 12px;
+    }
+    .googleAlt{
+        font-weight: 400;
+        text-align: center;
+        font-size: 12px;
+    }
+    .login-google,.login-btn{
+        font-size: 15px;
     }
   }
