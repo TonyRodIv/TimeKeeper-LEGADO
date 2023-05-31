@@ -34,11 +34,12 @@ header{
     justify-content: center;
     align-items: center;
 }
-
+.loaderContainer{
+  gap: 20px;
+}
 /* LOADING BAR */
 
 .progress-loader {
-  bottom: 16%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -71,6 +72,7 @@ header{
 
 /* LOADING */
 .loader {
+  position: relative;
     color: rgb(255, 255, 255);
     font-family: "Poppins",sans-serif;
     font-weight: 500;
