@@ -43,7 +43,7 @@ header {
 
 .pfpUser {
     border-radius: 100%;
-    filter: drop-shadow(2px 5px 20px #CAD5E6);
+    filter: drop-shadow(2px 5px 20px #cad5e673);
     border-radius: 20px;
 }
 
@@ -105,7 +105,7 @@ nav {
     position: fixed;
     bottom: 0;
     width: 85%;
-    height: 80px;
+    height: 70px;
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(25px);
 }
@@ -113,4 +113,5 @@ nav {
     height: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
