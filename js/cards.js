@@ -1,4 +1,5 @@
 let writeCard = document.getElementById('writeCards')
+let writeGreetings = document.getElementById('writeGreetings')
 
 fetch('../src/data.json')
   .then(response => response.json())
@@ -52,6 +53,13 @@ fetch('../src/data.json')
         </figure>
       `;
     }
+    writeGreetings.innerHTML = `<p>
+    <span class="greetings">
+        Bom dia, Alice!! <br>
+    </span>
+    Sua <span class="blueWelcome">Primeira aula</span> será no bloco <span
+        class="blueWelcome">${infoAulas[0].bloco}</span>👍🏼
+</p>`
     console.log(infoAulas);
     localStorage.setItem('CardOrder', numerosSorteados)
   });
