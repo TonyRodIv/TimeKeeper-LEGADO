@@ -18,7 +18,7 @@ main{
 
 header{
     background-image: url(../img/Cards/Icons\ bg\ -\ header.svg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 
     display: flex;
