@@ -12,6 +12,7 @@ body {
 
 main {
     height: 100vh;
+    overflow: auto;
 }
 
 header {
@@ -26,7 +27,7 @@ header {
     justify-content: space-between;
     width: 85%;
 
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -102,7 +103,7 @@ header {
 }
 .moreClasses{
     padding-left: 35px;
-    margin: 30px 0px 15px 0px;
+    margin: 15px 0px 15px 0px;
 }
 .moreClasses a {
     font-family: 'Roboto Slab';
@@ -132,12 +133,19 @@ header {
 .cardp {
     padding-left: 25px;
 }
+.content{
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 
 
 
 /* BARRA DE NAVEGAÇÃO */
 nav {
+    /* display: none; */
     position: fixed;
     bottom: 0;
     height: 70px;
