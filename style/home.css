@@ -102,7 +102,9 @@ header {
     bottom: 17px;
     right: 15px;
 }
-
+.content{
+    padding-left: 25px;
+}
 .cardClasses {
     width: 85%;
     max-width: 331px;
