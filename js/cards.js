@@ -25,7 +25,7 @@ fetch('../src/data.json')
 
     infoAulas.sort((a, b) => a.id - b.id);
     for (let i = 0; i < infoAulas.length; i++) {
-        writeCard.innerHTML += `
+      writeCard.innerHTML += `
         <figure class="${infoAulas[i].cor} normalCard">
           <div class="cardImg">
             <article class="infoCard">
@@ -51,7 +51,7 @@ fetch('../src/data.json')
           </div>
         </figure>
       `;
-      }
-
+    }
     console.log(infoAulas);
+    localStorage.setItem('CardOrder', numerosSorteados)
   });
