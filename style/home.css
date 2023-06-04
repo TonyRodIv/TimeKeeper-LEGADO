@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    text-decoration: none;
 }
 
 body {
@@ -11,9 +12,6 @@ body {
 
 main {
     height: 100vh;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
 }
 
 header {
@@ -102,6 +100,22 @@ header {
     bottom: 17px;
     right: 15px;
 }
+.moreClasses{
+    padding-left: 35px;
+    margin: 30px 0px 15px 0px;
+}
+.moreClasses a {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 38px;
+    color: #112940;
+}
+.moreClasses :hover{
+    filter: drop-shadow(2px 5px 20px #1129406c);
+}
+
 .cardClasses {
     width: 85%;
     max-width: 331px;
@@ -114,7 +128,8 @@ header {
     gap: 10px;
     overflow: auto;
 }
-.cardp{
+
+.cardp {
     padding-left: 25px;
 }
 
