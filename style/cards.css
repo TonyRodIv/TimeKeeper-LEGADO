@@ -1,0 +1,98 @@
+.normalCard {
+    min-width: 200px;
+    height: 185px;
+    box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    color: #fff;
+}
+
+.cardImg {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Cards/icons-bg-small-card.svg);
+
+}
+
+.infoCard {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    height: 75%;
+    width: 90%;
+}
+
+.infoBar {
+    width: 200px;
+    height: 25%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 0px 0px 15px 15px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.titleCard {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.infoClass {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.infoClassSpan {
+    font-weight: 400;
+}
+
+.textBoldCard {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+.teacherImg {
+    width: 30px;
+    height: 30px;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(2px 2px 20px rgba(114, 94, 179, 0.5));
+    border-radius: 9px;
+}
+
+
+
+
+
+
+.dark {
+    background-image: linear-gradient(130.25deg, #343434 3.08%, #161616 97.12%);
+}
+
+.blue {
+    background-image: linear-gradient(130.25deg, #6271F1 3.08%, #393F75 97.12%);
+}
+
+.purple {
+    background-image: linear-gradient(130.25deg, #5D4A90 3.08%, #3B2F5C 97.12%);
+}
+
+.green {
+    background-image: linear-gradient(130.25deg, #55B68C 3.08%, #325E4A 97.12%);
+}
+
+.pink {
+    background-image: linear-gradient(130.25deg, #E16A81 3.08%, #612E38 96.64%);
+}
+
+.gold {
+    background-image: linear-gradient(130.25deg, #D7C176 3.08%, #8B7D48 97.12%);
+}
+

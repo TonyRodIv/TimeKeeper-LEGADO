@@ -1,0 +1,70 @@
+[
+    {
+        "nomeDaAula": "WEB Design",
+        "sala": "01",
+        "andar": "1",
+        "bloco": "A",
+        "duracao": "1h",
+        "horarioDeInicio": "7:15",
+        "professor(a)": "Artur Toledo",
+        "categorias": ["Figma", "UI/UX", "Design de interfaces"],
+        "descricao":
+            "Nessa aula iremos aprender a explorar o universo do Figma! Descubra as habilidades fundamentais para criar designs incríveis e colaborativos. Explore recursos avançados de prototipagem, edição de vetores e compartilhamento em tempo real. Prepare-se para se inspirar com as infinitas possibilidades que o Figma tem a oferecer!"
+    },
+    {
+        "nomeDaAula": "Segurança no trabalho",
+        "sala": "05",
+        "andar": "02",
+        "bloco": "B",
+        "duracao": "2h",
+        "horarioDeInicio": "10:30",
+        "professor(a)": "Patrícia Oliveira",
+        "categorias": ["EPi's", "Normas de Segurança", "Prevenção de Acidentes"],
+        "descricao":
+            "Aprenda os fundamentos essenciais da segurança no trabalho nesta aula prática. Descubra como identificar riscos, implementar medidas de prevenção e promover um ambiente de trabalho seguro."
+    },
+    {
+        "nomeDaAula": "Automação Industrial",
+        "sala": "23",
+        "andar": "03",
+        "bloco": "C",
+        "duracao": "1:30h",
+        "horarioDeInicio": "12:45",
+        "professor(a)": "Vanessa Silva",
+        "categorias": ["Sensores", "Sistemas Automatizados", "Programação de CLPs"],
+        "descricao": "Explore o mundo da automação industrial nesta aula prática. Aprenda sobre sensores, controladores lógicos programáveis (CLPs) e integração de sistemas automatizados. Desenvolva habilidades para operar e programar equipamentos, preparando-se para impulsionar a eficiência na indústria."
+    },
+    {
+        "nomeDaAula": "Gestão de Moda",
+        "sala": "16",
+        "andar": "03",
+        "bloco": "D",
+        "duracao": "01h e 45min",
+        "horarioDeInicio": "8:15",
+        "professor(a)": "José Antônio",
+        "categorias": ["Moda", "Design de Vestuário", "Estratégias de Marketing"],
+        "descricao": "Desenvolva habilidades práticas de design, costura e seleção de materiais. Aprenda sobre gestão de moda e estratégias de marketing. Prepare-se para uma carreira promissora no mundo da moda."
+    },
+    {
+        "nomeDaAula": "Topografia",
+        "sala": "07",
+        "andar": "01",
+        "bloco": "B",
+        "duracao": "02h e 30min",
+        "horarioDeInicio": "14:30",
+        "professor(a)": "Adriana Martins",
+        "categorias": ["Técnico em Edificações", "Georreferenciamento", "Medições e Levantamentos Topográficos"],
+        "descricao": "Aprenda medição precisa do terreno, uso de instrumentos como teodolitos e estações totais, criação de mapas e identificação de acidentes geográficos para projetos de construção."
+    },
+    {
+        "nomeDaAula": "Transporte e Distribuição",
+        "sala": "03",
+        "andar": "01",
+        "bloco": "A",
+        "duracao": "1h e 50min",
+        "horarioDeInicio": "17:15",
+        "professor(a)": "Bruno Andrade",
+        "categorias": ["Técnico em Logística", "Modos de Transporte", "Roteirização e Otimização Logística"],
+        "descricao": "Estude modos de transporte, otimização de rotas e tecnologias na gestão logística. Desenvolva habilidades práticas para operações eficientes de entrega aos clientes."
+    }
+]

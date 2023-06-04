@@ -4,12 +4,12 @@ const usuarios = [
         senha: '12345678'
     },
     {
-        usuario: 'leticia@leticia.com',
-        senha: 'leticia654321'
+        usuario: 'email',
+        senha: 'senha'
     },
     {
-        usuario: 'bruno@bruno.com',
-        senha: 'bruno987654'
+        usuario: 'email@email.com',
+        senha: 'senha1234'
     },
 ]
 document.getElementById('form').addEventListener('submit',
