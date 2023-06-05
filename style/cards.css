@@ -1,9 +1,7 @@
 .adCard {
     width: 85%;
     max-width: 355px;
-    height: 18vh;
-    max-height: 180px;
-    min-height: 140px;
+    height: 160px;
     border-radius: 15px;
     margin: 0 auto;
 }
@@ -28,6 +26,7 @@
     height: 100%;
     background-image: url(../img/Cards/icons\ bg\ -\ Big\ card.svg);
     background-size: cover;
+
     position: relative;
 }
 
@@ -127,6 +126,10 @@
     filter: drop-shadow(2px 2px 20px rgba(114, 94, 179, 0.5));
     border-radius: 9px;
 }
+
+
+
+
 
 .ad {
     background: linear-gradient(106.47deg, #373737 7.89%, #366E7E 98.11%);
