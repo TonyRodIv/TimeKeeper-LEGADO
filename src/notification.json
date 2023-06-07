@@ -1,0 +1,29 @@
+
+   [
+    {
+      "titulo": "Aula cancelada",
+      "descricao": "A aula de Matemática de hoje foi cancelada.",
+      "data": "Hoje"
+    },
+    {
+      "titulo": "Atividade extracurricular",
+      "descricao": "Na sexta-feira, haverá uma atividade extracurricular de ciências.",
+      "data": "1 dia atrás"
+    },
+    {
+      "titulo": "Recuperação de prova",
+      "descricao": "A recuperação da prova de História será na próxima segunda-feira às 14h.",
+      "data": ""
+    },
+    {
+      "titulo": "Dia de fotos escolares",
+      "descricao": "Lembrete: Amanhã é o dia de fotos escolares.",
+      "data": ""
+    },
+    {
+      "titulo": "Recesso escolar",
+      "descricao": "Lembre-se de que a próxima semana é o recesso escolar.",
+      "data": "2 dias atrás"
+    }
+  ]
+
