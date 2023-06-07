@@ -1,7 +1,9 @@
 .adCard {
     width: 85%;
     max-width: 355px;
-    height: 160px;
+    height: 18vh;
+    max-height: 180px;
+    min-height: 140px;
     border-radius: 15px;
     margin: 0 auto;
 }
