@@ -25,6 +25,7 @@ function criarCarrosselMeses(meses, dias) {
       // Armazena a referência do botão de mês anteriormente clicado
       mesAnterior = this;
 
+      // Remove os botões de dia anteriores
       while (diasCarousel.firstChild) {
         diasCarousel.firstChild.remove();
       }
@@ -64,14 +65,25 @@ function criarCarrosselMeses(meses, dias) {
 function carregarDados() {
   fetch('../src/calendar.json')
     .then(response => response.json())
-    .then(data => criarCarrosselMeses(data.meses, data.dias))
+    .then(data => {
+      criarCarrosselMeses(data.meses, data.dias);
+
+      // Obter data atual
+      const dataAtual = new Date();
+      const mesAtual = dataAtual.toLocaleString('pt-BR', { month: 'long' });
+
+
+      // Percorrer os botões de mês para encontrar o correspondente à data atual
+      const botoesMes = document.querySelectorAll(".mes");
+
+      botoesMes.forEach((element, index) => {
+        if(element.innerHTML.toLowerCase() === mesAtual ) {
+          botoesMes[index].click()
+        }
+      });
+    })
     .catch(error => console.error(error));
 }
 
-
-
-
 // Chamada da função para carregar os dados
 carregarDados();
-
-
