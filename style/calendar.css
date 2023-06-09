@@ -1,0 +1,237 @@
+.meses-carousel,
+.dias-carousel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  overflow: auto;
+}
+
+.mes,.dia {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.mes{
+font-family: Poppins;
+font-size: 30px;
+font-weight: 500;
+text-align: center;
+border: none;
+background-color: transparent;
+color: #696969;
+}
+
+
+
+.dia {
+  font-family: Roboto;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  min-width: 56px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(25px);
+}
+
+
+
+.adCard {
+    width: 85%;
+    max-width: 355px;
+    height: 18vh;
+    max-height: 180px;
+    min-height: 140px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.normalCard {
+    min-width: 210px;
+    height: 200px;
+    box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    color: #fff;
+}
+
+.cardImg {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Cards/icons-bg-small-card.svg);
+    background-size: cover;
+}
+
+.cardImgAD {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Cards/icons\ bg\ -\ Big\ card.svg);
+    background-size: cover;
+
+    position: relative;
+}
+
+.infoCard {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1px;
+    height: 75%;
+    width: 80%;
+}
+
+.infoCardAD {
+    height: 100%;
+}
+
+.infoBar {
+    width: 100%;
+    height: 25%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 0px 0px 15px 15px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.titleCard {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.titleCardAD {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.boldTitle {
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.infoClass {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.74);
+    margin-bottom: -18px ;
+    margin-top:-18px ;
+}
+
+.infoClassSpan {
+    font-weight: 400;
+}
+
+.textBoldCard {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.beta {
+    position: absolute;
+    width: 49px;
+    height: 23px;
+    top: 20px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 5px 0px 0px 5px;
+
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 14px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    height: 100vh;
+    overflow: auto;
+    overflow: hidden;
+}
+
+.teacherImg {
+    width: 30px;
+    height: 30px;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(2px 2px 20px rgba(114, 94, 179, 0.5));
+    border-radius: 9px;
+}
+
+
+
+.dark {
+    background-image: linear-gradient(130.25deg, #343434 3.08%, #161616 97.12%);
+}
+
+.blue {
+    background-image: linear-gradient(130.25deg, #6271F1 3.08%, #393F75 97.12%);
+}
+
+.purple {
+    background-image: linear-gradient(130.25deg, #5D4A90 3.08%, #3B2F5C 97.12%);
+}
+
+.green {
+    background-image: linear-gradient(130.25deg, #55B68C 3.08%, #325E4A 97.12%);
+}
+
+.pink {
+    background-image: linear-gradient(130.25deg, #E16A81 3.08%, #612E38 96.64%);
+}
+
+.gold {
+    background-image: linear-gradient(130.25deg, #D7C176 3.08%, #8B7D48 97.12%);
+}
+.cardClasses {
+    width: 85%;
+    max-width: 331px;
+}
+
+
+
+
+/* BARRA DE NAVEGAÇÃO */
+nav {
+  /* display: none; */
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(25px);
+}
+
+.navIcons {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px 10px;
+}

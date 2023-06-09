@@ -63,3 +63,5 @@ fetch('../src/data.json')
     console.log(infoAulas);
     localStorage.setItem('CardOrder', numerosSorteados)
   });
+
+  
