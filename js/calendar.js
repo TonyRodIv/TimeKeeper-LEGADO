@@ -11,7 +11,7 @@ function criarCarrosselMeses(meses, dias) {
     elemento.classList.add("mes");
     elemento.textContent = mes;
     mesesCarousel.appendChild(elemento);
-    
+
     elemento.addEventListener("click", function () {
       // Remove os estilos do botão de mês anteriormente clicado
       if (mesAnterior) {
@@ -68,7 +68,6 @@ function carregarDados() {
     .then(data => {
       criarCarrosselMeses(data.meses, data.dias);
 
-
       // Obter data atual
       const dataAtual = new Date();
       const mesAtual = dataAtual.toLocaleString('pt-BR', { month: 'long' });
@@ -88,12 +87,3 @@ function carregarDados() {
 
 // Chamada da função para carregar os dados
 carregarDados();
-// Chamada da função para carregar os dados
-carregarDados();
-
-
-var data = new Date(); // cria um objeto de data com a data 15/02/2021
-var opcoes = { month: 'long', year: 'numeric', day: 'numeric' }; // define as opções de formato
-var dataFormatada = data.toLocaleString('pt-BR', opcoes); // formata a data para o idioma português do Brasil
-console.log(dataFormatada); // mostra a data formatada no console
-
