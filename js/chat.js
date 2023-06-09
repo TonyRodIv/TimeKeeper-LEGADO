@@ -1,5 +1,7 @@
+
 const inputQuestion = document.getElementById("inputQuestion");
 const result = document.getElementById("result");
+const resultU = document.getElementById("resultU");
 const regrasGPT = [
     {
         "role": "system",
@@ -41,7 +43,7 @@ fetch('../src/data.json')
             if (inputQuestion.value && e.key === "Enter") SendQuestion();
         });
 
-        const OPENAI_API_KEY = "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";
+        const OPENAI_API_KEY = "";
 
         function SendQuestion() {
             var sQuestion = inputQuestion.value;
@@ -83,9 +85,9 @@ fetch('../src/data.json')
                     inputQuestion.focus();
                 });
 
-            if (result.value) result.value += "\n\n\n";
+            // if (result.value) result.value += "\n\n\n";
 
-            result.value += `Eu: ${sQuestion}`;
+            resultU.value += `${sQuestion}`;
             inputQuestion.value = "Carregando...";
             inputQuestion.disabled = true;
 

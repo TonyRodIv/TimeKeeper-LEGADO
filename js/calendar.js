@@ -11,7 +11,7 @@ function criarCarrosselMeses(meses, dias) {
     elemento.classList.add("mes");
     elemento.textContent = mes;
     mesesCarousel.appendChild(elemento);
-
+    
     elemento.addEventListener("click", function () {
       // Remove os estilos do botão de mês anteriormente clicado
       if (mesAnterior) {
@@ -25,7 +25,6 @@ function criarCarrosselMeses(meses, dias) {
       // Armazena a referência do botão de mês anteriormente clicado
       mesAnterior = this;
 
-      // Remove os botões de dia anteriores
       while (diasCarousel.firstChild) {
         diasCarousel.firstChild.remove();
       }
@@ -65,25 +64,15 @@ function criarCarrosselMeses(meses, dias) {
 function carregarDados() {
   fetch('../src/calendar.json')
     .then(response => response.json())
-    .then(data => {
-      criarCarrosselMeses(data.meses, data.dias);
-
-      // Obter data atual
-      const dataAtual = new Date();
-      const mesAtual = dataAtual.toLocaleString('pt-BR', { month: 'long' });
-
-
-      // Percorrer os botões de mês para encontrar o correspondente à data atual
-      const botoesMes = document.querySelectorAll(".mes");
-
-      botoesMes.forEach((element, index) => {
-        if(element.innerHTML.toLowerCase() === mesAtual ) {
-          botoesMes[index].click()
-        }
-      });
-    })
+    .then(data => criarCarrosselMeses(data.meses, data.dias))
     .catch(error => console.error(error));
 }
 
 // Chamada da função para carregar os dados
 carregarDados();
+
+
+var data = new Date(); // cria um objeto de data com a data 15/02/2021
+var opcoes = { month: 'long', year: 'numeric', day: 'numeric' }; // define as opções de formato
+var dataFormatada = data.toLocaleString('pt-BR', opcoes); // formata a data para o idioma português do Brasil
+console.log(dataFormatada); // mostra a data formatada no console
