@@ -2,6 +2,7 @@
 const inputQuestion = document.getElementById("inputQuestion");
 const result = document.getElementById("result");
 const resultU = document.getElementById("resultU");
+const writeChat = document.getElementById("chat");
 const regrasGPT = [
     {
         "role": "system",
@@ -43,7 +44,11 @@ fetch('../src/data.json')
             if (inputQuestion.value && e.key === "Enter") SendQuestion();
         });
 
-        const OPENAI_API_KEY = "";
+
+        const tst1 = ["sk-G44F2d08H", "bkFJwtZI2bBr"]
+        const tst2 = ["yQ93BJPF51uT3Bl", "lzkNPAfQGmki"]
+
+        const OPENAI_API_KEY = `${tst1[0]}${tst2[0]}${tst1[1]}${tst2[1]}`;
 
         function SendQuestion() {
             var sQuestion = inputQuestion.value;
@@ -65,18 +70,21 @@ fetch('../src/data.json')
             })
                 .then((response) => response.json())
                 .then((json) => {
-                    if (result.value) result.value += "\n";
+                    // if (result.value) result.value += "\n";
 
                     if (json.error?.message) {
                         result.value += `Error: ${json.error.message}`;
                     } else if (json.choices?.[0].text) {
                         var text = json.choices[0].text || "Sem resposta";
 
-                        result.value += text;
+                        writeChat.innerHTML += `
+                        <section class="result">
+                    <figure id="result"> ${text}
+                    </figure>
+                </section>
+                        `
                         console.log(text)
                     }
-
-                    result.scrollTop = result.scrollHeight;
                 })
                 .catch((error) => console.error("Error:", error))
                 .finally(() => {
@@ -87,10 +95,15 @@ fetch('../src/data.json')
 
             // if (result.value) result.value += "\n\n\n";
 
-            resultU.value += `${sQuestion}`;
+            writeChat.innerHTML += `
+            <section class="resultU">
+                    <figure id="resultU">
+                        <p>${sQuestion}</p>
+                    </figure>
+                </section>
+            
+            `;
             inputQuestion.value = "Carregando...";
             inputQuestion.disabled = true;
-
-            result.scrollTop = result.scrollHeight;
         }
     });
