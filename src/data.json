@@ -6,7 +6,7 @@
         "andar": "1",
         "bloco": "A",
         "duracao": "01h e 30min",
-        "professor": "Artur Toledo",
+        "professor": "Artur Oliveira",
         "icon":"../img/Pfp/professor/man2.png",
         "categorias": ["Figma", "UI/UX", "Design de interfaces"],
         "descricao":
@@ -32,7 +32,7 @@
         "andar": "03",
         "bloco": "C",
         "duracao": "01h e 30min",
-        "professor": "Vanessa Silva",
+        "professor": "Gabriela Silva",
         "icon":"../img/Pfp/professor/woman1.png",
         "categorias": ["Sensores", "Sistemas Automatizados", "Programação de CLPs"],
         "descricao": "Explore o mundo da automação industrial nesta aula prática. Aprenda sobre sensores, controladores lógicos programáveis (CLPs) e integração de sistemas automatizados. Desenvolva habilidades para operar e programar equipamentos, preparando-se para impulsionar a eficiência na indústria."
@@ -68,7 +68,7 @@
         "andar": "01",
         "bloco": "A",
         "duracao": "01h e 30min",
-        "professor": "Bruno Andrade",
+        "professor": "Gabriel Andrade",
         "icon":"../img/Pfp/professor/man3.png",
         "categorias": ["Técnico em Logística", "Modos de Transporte", "Roteirização e Otimização Logística"],
         "descricao": "Estude modos de transporte, otimização de rotas e tecnologias na gestão logística. Desenvolva habilidades práticas para operações eficientes de entrega aos clientes."
