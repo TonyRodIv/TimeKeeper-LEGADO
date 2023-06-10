@@ -64,12 +64,15 @@ hr {
 
 header {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(25px);
+}
+header a img{
+  width: 25px;
+  transform: rotate(180deg);
 }
 
 .textWraper {
@@ -122,6 +125,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   margin: 0px 10px;
+  animation: slideInFromBottom 0.5s ease-out;
 }
 .navIcons a{
   width: 5%;
@@ -137,6 +141,7 @@ nav {
   max-width: 355px;
   height: 60px;
   position: relative;
+  animation: slideInFromBottom 0.5s ease-out;
 }
 
 .chatInputUser {
@@ -253,5 +258,32 @@ border-radius: 20px 20px 6px 20px;
 
   100% {
       transform: translateY(0);
+  }
+}
+@media (max-height: 740px) {
+  .content{
+    height: 65vh;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+@media (max-height: 600px) {
+  .content{
+    height: 60vh;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .navIcons {
+    height: 100%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 10px;
   }
 }

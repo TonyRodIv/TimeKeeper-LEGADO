@@ -1,7 +1,6 @@
 
 const inputQuestion = document.getElementById("inputQuestion");
-const result = document.getElementById("result");
-const resultU = document.getElementById("resultU");
+const sendA = document.getElementById("send");
 const writeChat = document.getElementById("chat");
 const regrasGPT = [
     {
@@ -43,6 +42,7 @@ fetch('../src/data.json')
         inputQuestion.addEventListener("keypress", (e) => {
             if (inputQuestion.value && e.key === "Enter") SendQuestion();
         });
+        sendA.addEventListener("click", SendQuestion);
 
 
         const tst1 = ["sk-G44F2d08H", "bkFJwtZI2bBr"]
