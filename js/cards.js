@@ -61,7 +61,9 @@ fetch('../src/data.json')
         class="blueWelcome">${infoAulas[0].bloco}</span>👍🏼
 </p>`
     console.log(infoAulas);
-    localStorage.setItem('CardOrder', numerosSorteados)
+    for(let i = 0;i<numerosSorteados.length;i++){
+      localStorage.setItem(`CardOrder${i}`, numerosSorteados[i])
+    }
   });
 
   

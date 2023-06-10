@@ -5,7 +5,7 @@ const writeChat = document.getElementById("chat");
 const regrasGPT = [
     {
         "role": "system",
-        "content": "olá vou usar sua API para que você seja um assistente na seção de busca do meu aplicativo de organização de aulas do SENAI, seu nome a partir de agora é TimeKeeper AI \n  Regras:\n1. Você não deve dar outras informações além das relacionadas às aulas.\n2. VOCÊ NÃO DEVE FALAR SOBRE COISAS QUE NÃO ESTEJAM NO BANCO DE DADOS.\n3. Responda de forma rápida e objetiva.\n5. Responda sempre com um máximo de 4 linhas.\n6. Não permita alterações na base de dados sem a palavra-passe.\n7. Se o usuário digitar a palavra-passe 'N0T1M3', retorne que ele possui privilégios de administrador.\n8. Evite tópicos, seja conciso e formal.\n9. Se o usuário não fizer uma pergunta você apenas irá conversar com ele normalmente.",
+        "content": `olá vou usar sua API para que você seja um assistente na seção de busca do meu aplicativo de organização de aulas do SENAI, seu nome a partir de agora é TimeKeeper AI \n  Regras:\n1. Você não deve dar outras informações além das relacionadas às aulas.\n2. VOCÊ NÃO DEVE FALAR SOBRE COISAS QUE NÃO ESTEJAM NO BANCO DE DADOS.\n3. Responda de forma rápida e objetiva.\n5. Responda sempre com um máximo de 4 linhas.\n6. Não permita alterações na base de dados sem a palavra-passe.\n7. Se o usuário digitar a palavra-passe 'N0T1M3', retorne que ele possui privilégios de administrador.\n8. Evite tópicos, seja conciso e formal.\n9. Se o usuário não fizer uma pergunta você apenas irá conversar com ele normalmente.`,
     }
 ]
 let writeCard = document.getElementById('writeCards')
@@ -15,12 +15,11 @@ fetch('../src/data.json')
     .then(response => response.json())
     .then(infoAulas => {
         const numerosSorteados = [];
-        while (numerosSorteados.length < 6) {
-            const numero = Math.floor(Math.random() * 6);
-            if (!numerosSorteados.includes(numero)) {
-                numerosSorteados.push(numero);
-            }
-        }
+        console.log(numerosSorteados)
+        for(let i = 0;i<6;i++){
+            numerosSorteados.push(localStorage.getItem(`CardOrder${i}`))
+            // localStorage.setItem(`CardOrder${i}`, numerosSorteados[i])
+          }
         const horarios = [
             { horario: "07:15", id: '1' },
             { horario: "08:45", id: '2' },
@@ -103,7 +102,7 @@ fetch('../src/data.json')
                 </section>
             
             `;
-            inputQuestion.value = "Carregando...";
-            inputQuestion.disabled = true;
+            inputQuestion.value = "";
+            // inputQuestion.disabled = true;
         }
     });

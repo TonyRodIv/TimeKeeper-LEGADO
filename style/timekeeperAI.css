@@ -20,7 +20,8 @@ main {
 header {
   display: flex;
   align-items: center;
-  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 5px;
 }
 
 .HeaderTitle {
@@ -157,26 +158,27 @@ nav {
   border: 1px solid #d8d8d86b;
   border-radius: 15px;
 
-  background-image: url(../img/Icons/search.svg);
+  /* background-image: url(../img/Icons/search.svg);
   background-repeat: no-repeat;
-  background-position: 15px;
-  padding-left: 50px;
+  background-position: 15px; */
+  padding-left: 60px;
+  padding-right: 5px;
 
   font-family: 'Roboto Flex';
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
   color: #888888;
+  overflow: auto;
 }
 
 .IADisabledSearch {
   position: absolute;
   bottom: 17px;
-  right: 15px;
+  left: 10px;
 }
 
 #result {
-  
   max-width: 300px;
   min-height: 60px;
   padding: 10px;
@@ -238,6 +240,7 @@ border-radius: 20px 20px 6px 20px;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  overflow: auto;
 }
 
 

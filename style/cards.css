@@ -10,10 +10,20 @@
 
 .normalCard {
     min-width: 210px;
+    max-width: 400px;
     height: 200px;
     box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     color: #fff;
+}
+#normalBigCard {
+    width: 90%;
+    max-width: 400px;
+    height: 200px;
+    min-height: 140px;
+    border-radius: 15px;
+    color: #fff;
+    margin: 10px;
 }
 
 .cardImg {
@@ -30,6 +40,12 @@
     background-size: cover;
 
     position: relative;
+}
+.cardImgBG {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Cards/icons\ bg\ -\ Big\ card.svg);
+    background-size: cover;
 }
 
 .infoCard {
