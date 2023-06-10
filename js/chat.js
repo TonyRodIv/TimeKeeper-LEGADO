@@ -104,3 +104,13 @@ fetch('../src/data.json')
             // inputQuestion.disabled = true;
         }
     });
+
+    function Greetings() {
+        writeChat.innerHTML += `
+                        <section class="result">
+                    <figure id="result"> Olá, sou o TimeKeeper AI. Como posso te ajudar?
+                    </figure>
+                </section>
+                        `
+        }
+        setTimeout(Greetings, 1000);
