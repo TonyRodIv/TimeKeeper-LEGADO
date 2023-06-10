@@ -47,7 +47,7 @@ fetch('../src/data.json')
               <p class="textBoldCard">
               ${infoAulas[i].professor}
               </p>
-              <img src="../img/Pfp/aluno/pfp - alice.png" class="teacherImg" alt="" srcset="">
+              <img src="${infoAulas[i].icon}" class="teacherImg" alt="" srcset="">
             </article>
           </div>
         </figure>

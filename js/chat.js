@@ -69,8 +69,6 @@ fetch('../src/data.json')
             })
                 .then((response) => response.json())
                 .then((json) => {
-                    // if (result.value) result.value += "\n";
-
                     if (json.error?.message) {
                         result.value += `Error: ${json.error.message}`;
                     } else if (json.choices?.[0].text) {
