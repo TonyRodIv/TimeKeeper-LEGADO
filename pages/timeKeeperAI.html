@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TimeKeeper AI</title>
-    <link rel="shortcut icon" href="../img/Logos/Logo icon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="../style/timekeeperAI.css">
-</head>
+    <link
+      rel="shortcut icon"
+      href="../img/Logos/Logo icon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style/timekeeperAI.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <header>
-            <a href="./home.html"><img src="../img/Icons/arrow.svg" alt="" srcset=""></a>
-            <h1 class="HeaderTiTle">Chat AI</h1>
-            <img src="../img/Icons/beta.svg" id="picBeta" alt="">
-        </header>
-        <section id="chatContainer">
-            <div class="content" id="chat">
-                <!-- <section class="resultU">
+      <header>
+        <a href="./home.html"
+          ><img src="../img/Icons/arrow.svg" alt="" srcset=""
+        /></a>
+        <h1 class="HeaderTiTle">Chat AI</h1>
+        <img src="../img/Icons/beta.svg" id="picBeta" alt="" />
+      </header>
+      <section id="chatContainer">
+        <div class="content" id="chat">
+          <!-- <section class="resultU">
                     <figure id="resultU">
                         <p>Vai ter aula de metodologias hoje?</p>
                     </figure>
@@ -28,28 +33,40 @@
                     <figure id="result">Sim, hoje teremos aula de metodologia na sala 3, bloco B com o professor Jucelino
                     </figure>
                 </section> -->
-                <!-- <textarea id="resultU" rows="3" disabled  placeholder=""></textarea>
+          <!-- <textarea id="resultU" rows="3" disabled  placeholder=""></textarea>
                     <textarea id="result" rows="10" disabled  placeholder="Resposta da IA"></textarea> -->
-            </div>
+        </div>
+      </section>
+      <nav>
+        <section class="chatInputUser">
+          <section class="search">
+            <input
+              type="text"
+              placeholder="O que você deseja?"
+              class="searchBar"
+              id="inputQuestion"
+            />
+            <a id="send">
+              <img src="../img/Icons/IA.svg" alt="" class="IADisabledSearch" />
+            </a>
+          </section>
         </section>
-        <nav>
-            <section class="chatInputUser">
-                <section class="search">
-                    <input type="text" placeholder="O que você deseja?" class="searchBar" id="inputQuestion">
-                    <a id="send">
-                        <img src="../img/Icons/IA.svg" alt="" class="IADisabledSearch">
-                    </a>
-                </section>
-            </section>
-            <section class="navIcons">
-                <a href="./home.html"><img src="../img/Icons/Home.svg" alt="" srcset=""></a>
-                <a href="./calendar.html"><img src="../img/Icons/Calendar.svg" alt="" srcset=""></a>
-                <a href="./notification.html"><img src="../img/Icons/Bell.svg" alt="" srcset=""></a>
-                <a href="./profile.html"><img src="../img/Icons/User.svg" alt="" srcset=""></a>
-            </section>
-        </nav>
+        <section class="navIcons">
+          <a href="./home.html"
+            ><img src="../img/Icons/Home.svg" alt="" srcset=""
+          /></a>
+          <a href="./calendar.html"
+            ><img src="../img/Icons/Calendar.svg" alt="" srcset=""
+          /></a>
+          <a href="./notification.html"
+            ><img src="../img/Icons/Bell.svg" alt="" srcset=""
+          /></a>
+          <a href="./profile.html"
+            ><img src="../img/Icons/User.svg" alt="" srcset=""
+          /></a>
+        </section>
+      </nav>
     </main>
     <script src="../js/chat.js"></script>
-</body>
-
+  </body>
 </html>

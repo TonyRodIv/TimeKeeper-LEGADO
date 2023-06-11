@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="shortcut icon" href="../img/Logos/Logo icon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="../style/login.css">
-</head>
+    <link
+      rel="shortcut icon"
+      href="../img/Logos/Logo icon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style/login.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <header>
-            <figure><img class="logo" src="../img/Logos/Logo_Main.svg" alt="" srcset=""></figure>
-        </header>
-        <section>
-            <form class="formulario" id="form">
-                <h1 class="login">Login</h1>
-                <div class="formDiv">
-                    <p class="inputAlt">Email</p>
-                    <input type="email" id="email" placeholder="    Ex: Aluno@es.estudante.senai.br">
-                    <p id="errorEmail" style="color: red; display: none;">Email Inválido</p>
-                </div>
-                <div class="formDiv">
-                    <p class="inputAlt">Senha</p>
-                    <input type="password" id="password" placeholder="    Ex: 12345678">
-                    <p id="errorPass" style="color: red; display: none;">Senha Inválida</p>
-                </div>
-                <button type="submit" class="login-btn">Fazer Login</button>
-                <div class="alternativas-login">
-                    <p class="googleAlt">Ou entre com sua conta de <span>estudante Google</span></p>
-                    <a href="#" class="googleCont">
-                        <button class="login-google"><img class="logo-google" src="../img/Icons/Google.svg" alt="" />
-                            Entrar com Google </button>
-
-                    </a>
-                </div>
-            </form>
-        </section>
-        <footer>
-            <p class="lightP">Não tem uma conta ou não consegue entrar?<br><span class="boldS"> Entre em contato</span>
+      <header>
+        <figure>
+          <img class="logo" src="../img/Logos/Logo_Main.svg" alt="" srcset="" />
+        </figure>
+      </header>
+      <section>
+        <form class="formulario" id="form">
+          <h1 class="login">Login</h1>
+          <div class="formDiv">
+            <p class="inputAlt">Email</p>
+            <input
+              type="email"
+              id="email"
+              placeholder="    Ex: Aluno@es.estudante.senai.br"
+            />
+            <p id="errorEmail" style="color: red; display: none">
+              Email Inválido
             </p>
-        </footer>
+          </div>
+          <div class="formDiv">
+            <p class="inputAlt">Senha</p>
+            <input
+              type="password"
+              id="password"
+              placeholder="    Ex: 12345678"
+            />
+            <p id="errorPass" style="color: red; display: none">
+              Senha Inválida
+            </p>
+          </div>
+          <button type="submit" class="login-btn">Fazer Login</button>
+          <div class="alternativas-login">
+            <p class="googleAlt">
+              Ou entre com sua conta de <span>estudante Google</span>
+            </p>
+            <a href="#" class="googleCont">
+              <button class="login-google">
+                <img class="logo-google" src="../img/Icons/Google.svg" alt="" />
+                Entrar com Google
+              </button>
+            </a>
+          </div>
+        </form>
+      </section>
+      <footer>
+        <p class="lightP">
+          Não tem uma conta ou não consegue entrar?<br /><span class="boldS">
+            Entre em contato</span
+          >
+        </p>
+      </footer>
     </main>
     <script src="../js/login.js"></script>
-</body>
-
+  </body>
 </html>

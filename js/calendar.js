@@ -2,62 +2,120 @@ let mesAnterior = null;
 let diaAnterior = null;
 
 // Função para criar o carrossel de meses
-function criarCarrosselMeses(meses, dias) {
+function criarCarrosselMeses() {
   const mesesCarousel = document.querySelector(".meses-carousel");
   const diasCarousel = document.querySelector(".dias-carousel");
+
+  
+  const dataAtual = new Date();
+  const mesAtual = dataAtual.getMonth();
+  const meses = {
+    anterior: new Intl.DateTimeFormat("pt-BR", { month: "long" }).format(
+      new Date(dataAtual.getFullYear(), mesAtual - 1)
+    ),
+    atual: new Intl.DateTimeFormat("pt-BR", { month: "long" }).format(
+      new Date(dataAtual.getFullYear(), mesAtual)
+    ),
+    proximo: new Intl.DateTimeFormat("pt-BR", { month: "long" }).format(
+      new Date(dataAtual.getFullYear(), mesAtual + 1)
+    )
+  };
 
   for (const mes in meses) {
     const elemento = document.createElement("button");
     elemento.classList.add("mes");
-    elemento.textContent = mes;
+    elemento.textContent = meses[mes];
     mesesCarousel.appendChild(elemento);
-
     elemento.addEventListener("click", function () {
+      
+    
       // Remove os estilos do botão de mês anteriormente clicado
       if (mesAnterior) {
         mesAnterior.style.fontSize = "";
         mesAnterior.style.color = "";
       }
-
+    
       // Aplica os estilos ao botão de mês atualmente clicado
       this.style.color = "#000"; // exemplo de cor do texto
       this.style.fontSize = "40px";
       // Armazena a referência do botão de mês anteriormente clicado
       mesAnterior = this;
-
+    
       // Remove os botões de dia anteriores
       while (diasCarousel.firstChild) {
         diasCarousel.firstChild.remove();
       }
-
-      const diasMes = meses[mes];
-
+    
+      const diasMes = obterDiasMes(mes);
+      const diaAtual = new Date().getDate();
+    
+      // Calcula a data do dia atual e o intervalo de dias a exibir
+      const dataDia = new Date(dataAtual.getFullYear(), dataAtual.getMonth(), diaAtual);
+      const diaInicio = new Date(dataDia);
+      diaInicio.setDate(diaInicio.getDate() - 5); // 5 dias anteriores
+      const diaFim = new Date(dataDia);
+      diaFim.setDate(diaFim.getDate() + 5); // 5 dias posteriores
+    
       for (const dia of diasMes) {
-        const diaElemento = document.createElement("div");
-        diaElemento.classList.add("dia");
-        diaElemento.textContent = dia;
-        diasCarousel.appendChild(diaElemento);
-
-        diaElemento.addEventListener("click", function () {
-          // Remove os estilos do botão de dia anteriormente clicado
-          if (diaAnterior) {
-            diaAnterior.style.backgroundColor = "";
-            diaAnterior.style.color = "";
-          }
-
-          // Aplica os estilos ao botão de dia atualmente clicado
-          this.style.backgroundColor = "#363636"; // exemplo de cor de fundo
-          this.style.color = "#ffffff"; // exemplo de cor do texto
-
-          // Armazena a referência do botão de dia anteriormente clicado
-          diaAnterior = this;
-
-          // Lógica para executar ação quando o botão de dia for clicado
-          console.log("Você clicou no dia:", dia);
-          // Adicione aqui a lógica para estilizar ou fazer alterações no botão de dia clicado
-        });
+        // Verifica se o dia está dentro do intervalo desejado
+        if (dia >= diaInicio.getDate() && dia <= diaFim.getDate()) { 
+          const diaElemento = document.createElement("div");
+          diaElemento.classList.add("dia");
+          diaElemento.textContent = dia;
+          diaElemento.setAttribute("data-dia", dia);
+          diasCarousel.appendChild(diaElemento);
+    
+          diaElemento.addEventListener("click", function () {
+            // Remove os estilos do botão de dia anteriormente clicado
+            if (diaAnterior) {
+              diaAnterior.style.backgroundColor = "";
+              diaAnterior.style.color = "";
+            }
+    
+            // Aplica os estilos ao botão de dia atualmente clicado
+           if(diaAtual){ this.style.backgroundColor = "#363636"; // exemplo de cor de fundo
+            this.style.color = "#ffffff"; // exemplo de cor do texto
+           }
+           
+           
+           
+           
+           // Armazena a referência do botão de dia anteriormente clicado
+            diaAnterior = this;
+    
+            // Lógica para executar ação quando o botão de dia for clicado
+            console.log("Você clicou no dia:", dia);
+            // Adicione aqui a lógica para estilizar ou fazer alterações no botão de dia clicado
+          });
+        }
       }
     });
+  
+    
+    
+  
+  }
+}
+
+// Função para obter os dias do mês
+function obterDiasMes(mes) {
+  const dataAtual = new Date();
+  const mesAtual = dataAtual.getMonth();
+  const mesAnterior = new Date(dataAtual.getFullYear(), mesAtual - 1);
+  const proximoMes = new Date(dataAtual.getFullYear(), mesAtual + 1);
+  const diasAnterior = new Date(mesAnterior.getFullYear(), mesAnterior.getMonth() + 1, 0).getDate();
+  const diasAtual = new Date(dataAtual.getFullYear(), mesAtual + 1, 0).getDate();
+  const diasProximo = new Date(proximoMes.getFullYear(), proximoMes.getMonth() + 1, 0).getDate();
+
+  switch (mes) {
+    case "anterior":
+      return Array.from({ length: diasAnterior }, (_, i) => i + 1);
+    case "atual":
+      return Array.from({ length: diasAtual }, (_, i) => i + 1);
+    case "proximo":
+      return Array.from({ length: diasProximo }, (_, i) => i + 1);
+    default:
+      return [];
   }
 }
 
@@ -66,60 +124,64 @@ function carregarDados() {
   fetch('../src/calendar.json')
     .then(response => response.json())
     .then(data => {
-      criarCarrosselMeses(data.meses, data.dias);
+      const meses = data.meses;
+      const dias = data.dias;
+
+      criarCarrosselMeses();
 
       // Obter data atual
       const dataAtual = new Date();
       const mesAtual = dataAtual.toLocaleString('pt-BR', { month: 'long' });
-
 
       // Percorrer os botões de mês para encontrar o correspondente à data atual
       const botoesMes = document.querySelectorAll(".mes");
 
       botoesMes.forEach((element, index) => {
         if (element.innerHTML.toLowerCase() === mesAtual) {
-          botoesMes[index].click()
+          element.click(); // Clica no botão de mês atual
+          
+          // Obtém o botão de dia atual
+          const botaoDiaAtual = document.querySelector(".dia[data-dia='" + dataAtual.getDate() + "']");
+          if (botaoDiaAtual) {
+            botaoDiaAtual.click(); // Clica no botão de dia atual
+          }
         }
       });
     })
     .catch(error => console.error(error));
 }
-// FAZ A SCROLLBAR IR ATÉ O MêS e dia ATUAL
+
+// FAZ A SCROLLBAR IR ATÉ O MÊS E DIA ATUAL
 window.addEventListener('load', function () {
-  console.log("mês")
   const mesesScroll = document.getElementById('mesesCarousel');
   const dataAtual = new Date();
-  let mesAtual = dataAtual.getMonth();
-  mesAtual += 1;
-  let posicaoDesejadaMes = 96.5*mesAtual;
+  const mesAtual = dataAtual.getMonth();
+  const posicaoDesejadaMes = 96.5 * mesAtual;
   mesesScroll.scrollLeft = posicaoDesejadaMes;
 });
+
 window.addEventListener('load', function () {
-  console.log("dia")
   const dataAtual = new Date();
   const diasScroll = document.getElementById('diasCarousel');
-  let diaAtual = dataAtual.getDate();
-  console.log(diaAtual)
-  let posicaoDesejadaDia = 43.5*diaAtual;
+  const diaAtual = dataAtual.getDate();
+  const posicaoDesejadaDia = 16 * diaAtual;
   diasScroll.scrollLeft = posicaoDesejadaDia;
 });
-
 
 // Chamada da função para carregar os dados
 carregarDados();
 
 
-
-let writeCard = document.getElementById('writeCards')
-let writeGreetings = document.getElementById('writeGreetings')
+let writeCard = document.getElementById('writeCards');
+let writeGreetings = document.getElementById('writeGreetings');
 
 fetch('../src/data.json')
   .then(response => response.json())
   .then(infoAulas => {
     const numerosSorteados = [];
-    console.log(numerosSorteados)
+    console.log(numerosSorteados);
     for (let i = 0; i < 6; i++) {
-      numerosSorteados.push(localStorage.getItem(`CardOrder${i}`))
+      numerosSorteados.push(localStorage.getItem(`CardOrder${i}`));
       // localStorage.setItem(`CardOrder${i}`, numerosSorteados[i])
     }
     const horarios = [
@@ -151,7 +213,7 @@ fetch('../src/data.json')
                 DURAÇÃO: <span class="infoClassSpan">${infoAulas[i].duracao}</span>
               </p>
               <p class="textBoldCard">
-                Hoje as ${infoAulas[i].horario}
+                Hoje às ${infoAulas[i].horario}
               </p>
             </article>
             <article class="infoBar">
@@ -164,6 +226,5 @@ fetch('../src/data.json')
         </figure>
       `;
     }
-    console.log(infoAulas)
+    console.log(infoAulas);
   });
-
