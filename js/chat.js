@@ -1,6 +1,7 @@
 
 const inputQuestion = document.getElementById("inputQuestion");
 const sendA = document.getElementById("send");
+const betaNewKey = document.getElementById("picBeta");
 const writeChat = document.getElementById("chat");
 const regrasGPT = [
     {
@@ -16,10 +17,10 @@ fetch('../src/data.json')
     .then(infoAulas => {
         const numerosSorteados = [];
         console.log(numerosSorteados)
-        for(let i = 0;i<6;i++){
+        for (let i = 0; i < 6; i++) {
             numerosSorteados.push(localStorage.getItem(`CardOrder${i}`))
             // localStorage.setItem(`CardOrder${i}`, numerosSorteados[i])
-          }
+        }
         const horarios = [
             { horario: "07:15", id: '1' },
             { horario: "08:45", id: '2' },
@@ -39,25 +40,27 @@ fetch('../src/data.json')
         console.log(infoAulas);
 
         inputQuestion.addEventListener("keypress", (e) => {
-            if (inputQuestion.value && e.key === "Enter") SendQuestion();
+            if (inputQuestion.value && e.key === "Enter") SendQuestion(OPENAI_API_KEY);
         });
         sendA.addEventListener("click", SendQuestion);
-
-
+        betaNewKey.addEventListener("click", ()=>{
+            let newKey = window.prompt("Digite uma nova chave API \n Não se preocupe, essa chave não será salva pelo site")
+            SendQuestion(newKey)
+        });
+        
         const tst1 = ["sk-G44F2d08H", "bkFJwtZI2bBr"]
         const tst2 = ["yQ93BJPF51uT3Bl", "lzkNPAfQGmki"]
+        let OPENAI_API_KEY = `${tst1[0]}s${tst2[0]}${tst1[1]}${tst2[1]}`;
 
-        const OPENAI_API_KEY = `${tst1[0]}${tst2[0]}${tst1[1]}${tst2[1]}`;
-
-        function SendQuestion() {
-            var sQuestion = inputQuestion.value;
+        function SendQuestion(key) {
+            let sQuestion = inputQuestion.value;
 
             fetch("https://api.openai.com/v1/completions", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
                     "Content-Type": "application/json",
-                    Authorization: "Bearer " + OPENAI_API_KEY,
+                    Authorization: "Bearer " + key,
                 },
                 body: JSON.stringify({
                     model: "text-davinci-003",
@@ -69,9 +72,7 @@ fetch('../src/data.json')
             })
                 .then((response) => response.json())
                 .then((json) => {
-                    if (json.error?.message) {
-                        result.value += `Error: ${json.error.message}`;
-                    } else if (json.choices?.[0].text) {
+                    if (json.choices?.[0].text) {
                         var text = json.choices[0].text || "Sem resposta";
 
                         writeChat.innerHTML += `
@@ -81,6 +82,13 @@ fetch('../src/data.json')
                 </section>
                         `
                         console.log(text)
+                    } else {
+                        writeChat.innerHTML += `
+                        <section class="result">
+                    <figure id="result"><strong> ERRO! ${json.error.message} NENHUMA CHAVE API FOI ENCONTRADA:</strong><br> Por favor aperte no botão "beta" na parte superior da tela e digite uma nova chave API para continuar usando o TimeKeeper AI ou consulte o suporte do SENAI TimeKeeper.
+                    </figure>
+                </section>
+                        `
                     }
                 })
                 .catch((error) => console.error("Error:", error))
@@ -105,12 +113,12 @@ fetch('../src/data.json')
         }
     });
 
-    function Greetings() {
-        writeChat.innerHTML += `
+function Greetings() {
+    writeChat.innerHTML += `
                         <section class="result">
                     <figure id="result"> Olá, sou o TimeKeeper AI. Como posso te ajudar?
                     </figure>
                 </section>
                         `
-        }
-        setTimeout(Greetings, 1000);
+}
+setTimeout(Greetings, 1000);
