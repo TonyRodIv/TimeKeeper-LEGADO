@@ -43,10 +43,10 @@ fetch('../src/data.json')
             if (inputQuestion.value && e.key === "Enter") SendQuestion(OPENAI_API_KEY);
         });
         sendA.addEventListener("click", SendQuestion);
-        betaNewKey.addEventListener("click", ()=>{
-            let newKey = window.prompt("Digite uma nova chave API \n Não se preocupe, essa chave não será salva pelo site")
-            SendQuestion(newKey)
-        });
+        // betaNewKey.addEventListener("click", ()=>{
+        //     let newKey = window.prompt("Digite uma nova chave API \n Não se preocupe, essa chave não será salva pelo site")
+        //     SendQuestion(newKey)
+        // });
         
         const tst1 = ["sk-G44F2d08H", "bkFJwtZI2bBr"]
         const tst2 = ["yQ93BJPF51uT3Bl", "lzkNPAfQGmki"]
