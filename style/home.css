@@ -97,6 +97,7 @@ header {
     font-weight: 500;
     font-size: 17px;
     color: #888888;
+    overflow: auto;
 }
 
 .IADisabledSearch {

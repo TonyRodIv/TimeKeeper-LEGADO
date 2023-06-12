@@ -41,20 +41,31 @@ fetch('../src/data.json')
         // console.log(texto);
         console.log(infoAulas);
 
+
+
+        const tst1 = ["sk-YdqdjH1Ct", "T3BlbkFJXPcPWuZ"]
+        const tst2 = ["fRTmbjYrib6", "sCmX8YLHubvow"]
+        let OPENAI_API_KEY = `${tst1[0]}${tst2[0]}${tst1[1]}${tst2[1]}`;
+        
+        let homeQuestionI = localStorage.getItem('homeQuestion')
+        localStorage.removeItem('homeQuestion');
+        if (homeQuestionI === null) {
+            
+        } else {
+            inputQuestion.value = `${homeQuestionI}`;
+            SendQuestion(OPENAI_API_KEY)
+        }
+
         inputQuestion.addEventListener("keypress", (e) => {
             if (inputQuestion.value && e.key === "Enter") SendQuestion(OPENAI_API_KEY);
         });
-        sendA.addEventListener("click", ()=>{
+        sendA.addEventListener("click", () => {
             SendQuestion(OPENAI_API_KEY)
         });
-        betaNewKey.addEventListener("click", ()=>{
+        betaNewKey.addEventListener("click", () => {
             let newKey = window.prompt("Digite uma nova chave API \n Não se preocupe, essa chave não será salva pelo site")
             SendQuestion(newKey)
         });
-        
-        const tst1 = ["sk-YdqdjH1Ct", "T3BlbkFJXPcPWuZ"]
-        const tst2 = ["fRTmbjYrib6", "sCmX8YLHubvow"]
-        let OPENAI_API_KEY = `S${tst1[0]}${tst2[0]}${tst1[1]}${tst2[1]}`;
 
         function SendQuestion(key) {
             let sQuestion = inputQuestion.value;
