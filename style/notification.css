@@ -111,6 +111,7 @@ nav {
   justify-content: center;
   gap: 20px;
 }
+
 .navIcons {
   height: 100%;
   display: flex;
@@ -118,10 +119,12 @@ nav {
   align-items: center;
   margin: 0px 10px;
 }
-.navIcons a{
+
+.navIcons a {
   width: 5%;
   min-width: 35px;
 }
-.navIcons a img{
+
+.navIcons a img {
   width: 100%;
 }
