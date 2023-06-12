@@ -1,6 +1,5 @@
 let writeCard = document.getElementById('writeCards')
 let writeGreetings = document.getElementById('writeGreetings')
-let inputQuestion = document.getElementById('chatInit')
 
 fetch('../src/data.json')
   .then(response => response.json())
@@ -61,12 +60,5 @@ fetch('../src/data.json')
 </p>`
     console.log(infoAulas);
   });
-
-  inputQuestion.addEventListener("keypress", (e) => {
-    if (inputQuestion.value && e.key === "Enter"){
-      localStorage.setItem("homeQuestion",`${inputQuestion.value}`)
-      window.location.href = './timeKeeperAI.html'
-    }
-});
 
   

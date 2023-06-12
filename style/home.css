@@ -86,24 +86,19 @@ header {
     background: #FBFBFB;
     border: 1px solid #D8D8D8;
     border-radius: 15px;
-
-    background-image: url(../img/Icons/search.svg);
-    background-repeat: no-repeat;
-    background-position: 15px;
-    padding-left: 50px;
+    padding-left: 55px;
 
     font-family: 'Roboto Flex';
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
     color: #888888;
-    overflow: auto;
 }
 
 .IADisabledSearch {
     position: absolute;
     bottom: 17px;
-    right: 15px;
+    left: 10px;
 }
 .moreClasses{
     padding-left: 35px;

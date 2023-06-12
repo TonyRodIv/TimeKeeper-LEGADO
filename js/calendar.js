@@ -55,9 +55,9 @@ fetch('../src/data.json')
           // Calcula a data do dia atual e o intervalo de dias a exibir
           const dataDia = new Date(dataAtual.getFullYear(), dataAtual.getMonth(), diaAtual);
           const diaInicio = new Date(dataDia);
-          diaInicio.setDate(diaInicio.getDate() - 5); // 5 dias anteriores
+          diaInicio.setDate(diaInicio.getDate() - 3); // 5 dias anteriores
           const diaFim = new Date(dataDia);
-          diaFim.setDate(diaFim.getDate() + 5); // 5 dias posteriores
+          diaFim.setDate(diaFim.getDate() + 3); // 5 dias posteriores
 
           for (const dia of diasMes) {
             // Verifica se o dia está dentro do intervalo desejado
