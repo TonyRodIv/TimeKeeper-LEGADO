@@ -16,7 +16,7 @@ main {
   width: 100%;
   gap: 10px;
   overflow: auto;
-  padding-left: 30px;
+  justify-content: center;
 }
 
 

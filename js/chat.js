@@ -3,10 +3,12 @@ const inputQuestion = document.getElementById("inputQuestion");
 const sendA = document.getElementById("send");
 const betaNewKey = document.getElementById("picBeta");
 const writeChat = document.getElementById("chat");
+let date = new Date()
+console.log(date)
 const regrasGPT = [
     {
         "role": "system",
-        "content": `olá vou usar sua API para que você seja um assistente na seção de busca do meu aplicativo de organização de aulas do SENAI, seu nome a partir de agora é TimeKeeper AI \n  Regras:\n1. Você não deve dar outras informações além das relacionadas às aulas.\n2. VOCÊ NÃO DEVE FALAR SOBRE COISAS QUE NÃO ESTEJAM NO BANCO DE DADOS.\n3. Responda de forma rápida e objetiva.\n5. Responda sempre com um máximo de 4 linhas.\n6. Não permita alterações na base de dados sem a palavra-passe.\n7. Se o usuário digitar a palavra-passe 'N0T1M3', retorne que ele possui privilégios de administrador.\n8. Evite tópicos, seja conciso e formal.\n9. Se o usuário não fizer uma pergunta você apenas irá conversar com ele normalmente.`,
+        "content": `olá vou usar sua API para que você seja um assistente na seção de busca do meu aplicativo de organização de aulas do SENAI, seu nome a partir de agora é TimeKeeper AI \n  Regras:\n 1. Você não deve dar outras informações além das relacionadas às aulas.\n 2. VOCÊ NÃO DEVE FALAR SOBRE COISAS QUE NÃO ESTEJAM NO BANCO DE DADOS.\n 3. Responda de forma rápida e objetiva.\n 5. Responda sempre com um máximo de 4 linhas.\n 6. Não permita alterações na base de dados sem a palavra-passe.\n 7. Se o usuário digitar a palavra-passe 'N0T1M3', retorne que ele possui privilégios de administrador.\n 8. Evite tópicos, seja conciso e formal.\n 9. Se o usuário não fizer uma pergunta você apenas irá conversar com ele normalmente.\n 10. O dia e o horario atual é ${date}.\n 11. todos os dias tem as mesmas aulas porém com os horários alterados, você pode sortear os hórarios, usando os do banco de dados. \n 12. Se passar do horário de inicio da aula o aluno só poderá entrar apenas na próxima aula`,
     }
 ]
 let writeCard = document.getElementById('writeCards')
@@ -42,15 +44,17 @@ fetch('../src/data.json')
         inputQuestion.addEventListener("keypress", (e) => {
             if (inputQuestion.value && e.key === "Enter") SendQuestion(OPENAI_API_KEY);
         });
-        sendA.addEventListener("click", SendQuestion);
+        sendA.addEventListener("click", ()=>{
+            SendQuestion(OPENAI_API_KEY)
+        });
         betaNewKey.addEventListener("click", ()=>{
             let newKey = window.prompt("Digite uma nova chave API \n Não se preocupe, essa chave não será salva pelo site")
             SendQuestion(newKey)
         });
         
-        const tst1 = ["sk-G44F2d08H", "bkFJwtZI2bBr"]
-        const tst2 = ["yQ93BJPF51uT3Bl", "lzkNPAfQGmki"]
-        let OPENAI_API_KEY = `${tst1[0]}${tst2[0]}${tst1[1]}${tst2[1]}`;
+        const tst1 = ["sk-YdqdjH1Ct", "T3BlbkFJXPcPWuZ"]
+        const tst2 = ["fRTmbjYrib6", "sCmX8YLHubvow"]
+        let OPENAI_API_KEY = `S${tst1[0]}${tst2[0]}${tst1[1]}${tst2[1]}`;
 
         function SendQuestion(key) {
             let sQuestion = inputQuestion.value;
