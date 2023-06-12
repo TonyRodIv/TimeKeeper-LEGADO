@@ -7,4 +7,16 @@ function delayedFunction() {
   }
   }
   setTimeout(delayedFunction, 5000);
+
+  
+  const numerosSorteados = [];
+    while (numerosSorteados.length < 6) {
+      const numero = Math.floor(Math.random() * 6);
+      if (!numerosSorteados.includes(numero)) {
+        numerosSorteados.push(numero);
+      }
+    }
+    for(let i = 0;i<numerosSorteados.length;i++){
+      localStorage.setItem(`CardOrder${i}`, numerosSorteados[i])
+    }
   

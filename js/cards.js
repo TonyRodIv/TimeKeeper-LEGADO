@@ -5,12 +5,10 @@ fetch('../src/data.json')
   .then(response => response.json())
   .then(infoAulas => {
     const numerosSorteados = [];
-    while (numerosSorteados.length < 6) {
-      const numero = Math.floor(Math.random() * 6);
-      if (!numerosSorteados.includes(numero)) {
-        numerosSorteados.push(numero);
+      for (let i = 0; i < 6; i++) {
+        numerosSorteados.push(localStorage.getItem(`CardOrder${i}`));
       }
-    }
+
     const horarios = [
       { horario: "7:15", id: '1' },
       { horario: "8:45", id: '2' },
@@ -61,9 +59,6 @@ fetch('../src/data.json')
         class="blueWelcome">${infoAulas[0].bloco}</span>👍🏼
 </p>`
     console.log(infoAulas);
-    for(let i = 0;i<numerosSorteados.length;i++){
-      localStorage.setItem(`CardOrder${i}`, numerosSorteados[i])
-    }
   });
 
   

@@ -2,6 +2,7 @@
 
 body {
   font-family: roboto;
+  margin: 0;
 }
 
 main {
@@ -17,6 +18,9 @@ main {
   gap: 10px;
   overflow: auto;
   justify-content: center;
+}
+.dias-carousel{
+  overflow: hidden;
 }
 
 
