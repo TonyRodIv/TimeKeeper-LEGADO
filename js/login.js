@@ -1,16 +1,12 @@
 const usuarios = [
     {
-        usuario: 'Aluno@es.estudante.senai.br',
-        senha: '12345678'
-    },
-    {
-        usuario: 'email',
-        senha: 'senha'
-    },
-    {
         usuario: 'email@email.com',
         senha: 'senha1234'
     },
+    {
+        usuario: 'aluno@es.estudante.senai.br',
+        senha: '12345678'
+    }
 ]
 document.getElementById('form').addEventListener('submit',
     function validate(event) {

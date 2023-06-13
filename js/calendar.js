@@ -200,6 +200,7 @@ fetch('../src/data.json')
         }
       }
       console.log(numerosSorteados)
+      localStorage.setItem('localRandomNum',numerosSorteados)
       loadCards()
     }
     function dataAtualS() {
@@ -210,6 +211,7 @@ fetch('../src/data.json')
         numerosSorteados.push(localStorage.getItem(`CardOrder${i}`));
       }
       console.log(numerosSorteados, "carregando data atual")
+      localStorage.setItem('localRandomNum',numerosSorteados)
       loadCards()
     }
 
@@ -218,8 +220,8 @@ fetch('../src/data.json')
     function loadCards() {
 
       const horarios = [
-        { horario: "7:15", id: '1' },
-        { horario: "8:45", id: '2' },
+        { horario: "07:15", id: '1' },
+        { horario: "08:45", id: '2' },
         { horario: "10:30", id: '3' },
         { horario: "12:30", id: '4' },
         { horario: "14:15", id: '5' },
@@ -234,7 +236,7 @@ fetch('../src/data.json')
       writeCard.innerHTML = ""
       for (let i = 0; i < infoAulas.length; i++) {
         writeCard.innerHTML += `
-        <figure class="${infoAulas[i].cor}" id="normalBigCard">
+        <figure class="${infoAulas[i].cor}" id="normalBigCard" onclick="card${numerosSorteados[i]}()">
           <div class="cardImgBG">
             <article class="infoCard">
               <p class="titleCard">
@@ -263,3 +265,47 @@ fetch('../src/data.json')
     }
     console.log(infoAulas);
   });
+
+  const horarios = [
+    { horario: "07:15", id: '1' },
+    { horario: "08:45", id: '2' },
+    { horario: "10:30", id: '3' },
+    { horario: "12:30", id: '4' },
+    { horario: "14:15", id: '5' },
+    { horario: "15:45", id: '6' }
+  ];
+  let numerosSorteadosDetail =localStorage.getItem('localRandomNum')
+  numerosSorteadosDetail = numerosSorteadosDetail.split(",");
+  console.log(numerosSorteadosDetail)
+
+  
+function card0() {
+  localStorage.setItem("cardDetail", 0)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[0]].horario)
+  window.location.href = './taskDetail.html'
+}
+function card1() {
+  localStorage.setItem("cardDetail", 1)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[1]].horario)
+  window.location.href = './taskDetail.html'
+}
+function card2() {
+  localStorage.setItem("cardDetail", 2)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[2]].horario)
+  window.location.href = './taskDetail.html'
+}
+function card3() {
+  localStorage.setItem("cardDetail", 3)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[3]].horario)
+  window.location.href = './taskDetail.html'
+}
+function card4() {
+  localStorage.setItem("cardDetail", 4)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[4]].horario)
+  window.location.href = './taskDetail.html'
+}
+function card5() {
+  localStorage.setItem("cardDetail", 5)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[5]].horario)
+  window.location.href = './taskDetail.html'
+}
