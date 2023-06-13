@@ -17,7 +17,6 @@ main {
 .taskHeader {
     height: 30vh;
     max-height: 256.33px;
-    background-image: url(../img/Cards/Icons\ bg\ -\ header.svg);
     background-size: cover;
     position: relative;
 }
@@ -216,6 +215,42 @@ main {
 .color2{
     background: #CBEDF7;
     color: #345665;
+}
+
+.blue{
+    background-color: #007ED938;
+    color: #007ED9;
+}
+.gold{
+    background-color: #D9C30038;
+    color: #D9C300;
+}
+.green{
+    background-color: #00990F38;
+    color: #00990F;
+}
+.pink{
+    background-color: #99002E38;
+    color: #88394D;
+}
+.purple{
+    background-color: #24004838;
+    color: #240048;
+}
+.blueS svg path{
+    color: #007ED9;
+}
+.goldS{
+    color: #D9C300;
+}
+.greenS{
+    color: #00990F;
+}
+.pinkS path{
+    fill: #88394D;
+}
+.purpleS{
+    color: #240048;
 }
 
 

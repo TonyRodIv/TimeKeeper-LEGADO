@@ -1,3 +1,4 @@
+let head = document.getElementById('head')
 let title = document.getElementById('title')
 let mainGrid = document.getElementById('mainGrid')
 let subInfo = document.getElementById('subInfo')
@@ -9,9 +10,11 @@ fetch('../src/data.json')
     .then(infoAulas => {
         let i = localStorage.getItem("cardDetail")
         let horario = localStorage.getItem("horario")
-
-
-
+        let color = infoAulas[i].cor
+        if(color == "dark"){
+            head.style.backgroundImage = "url('../img/Cards/Icons\ bg\ -\ header.svg')"
+        }
+        head.style.backgroundImage = `url('../img/Cards/${color}.svg')`
         let atribuicao = infoAulas[i].atribuicao
         if(atribuicao>0){
             console.log("teste")
@@ -32,7 +35,7 @@ fetch('../src/data.json')
         
         mainGrid.innerHTML +=`
         <article class="cardM">
-                        <img src="../img/Icons/Atribuição.svg" alt="">
+                        <img src="../img/Icons/Atribuição.svg" class="${color}S" alt="">
                         <p class="cardTitle">
                             Atribuição
                             <span class="cardContent">
@@ -41,7 +44,7 @@ fetch('../src/data.json')
                         </p>
                     </article>
         <article class="cardM">
-                        <img src="../img/Icons/Clock.svg" alt="">
+                        <img src="../img/Icons/Clock.svg" class="${color}S" alt="">
                         <p class="cardTitle">
                             Duração
                             <span class="cardContent">
@@ -50,7 +53,7 @@ fetch('../src/data.json')
                         </p>
                     </article>
         <article class="cardM">
-                        <img src="../img/Icons/Clock.svg" alt="">
+                        <object data="../img/Icons/Clock.svg" class="${color}S" type="image/svg+xml"></object>
                         <p class="cardTitle">
                             Começa às
                             <span class="cardContent">
@@ -60,13 +63,13 @@ fetch('../src/data.json')
                     </article>
         `
         subInfo.innerHTML = `
-        <artigle class="subCard">
+        <artigle class="subCard ${color}">
         <p>SALA: ${infoAulas[i].sala}</p>
     </artigle>
-        <artigle class="subCard">
+        <artigle class="subCard ${color}">
         <p>ANDAR: ${infoAulas[i].andar}</p>
     </artigle>
-        <artigle class="subCard">
+        <artigle class="subCard ${color}">
         <p>BLOCO: ${infoAulas[i].bloco}</p>
     </artigle>
         `
