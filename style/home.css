@@ -138,6 +138,10 @@ header {
     flex-direction: column;
     gap: 20px;
 }
+.navSpace{
+    width: 100%;
+    height: 20px;
+  }
 
 
 

@@ -21,6 +21,10 @@ header {
 
 }
 
+.navSpace{
+  width: 100%;
+  height: 80px;
+}
 
  .Data {
   margin: 20px;
