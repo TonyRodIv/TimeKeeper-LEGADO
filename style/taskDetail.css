@@ -95,6 +95,10 @@ main {
     gap: 10px;
     overflow: auto;
 }
+.navSpace{
+    width: 100%;
+    height: 80px;
+}
 
 .mainGrid {
     height: 30vh;
