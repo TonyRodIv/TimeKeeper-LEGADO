@@ -79,6 +79,7 @@ main {
     gap: 10px;
 }
 
+.category,
 .description,
 .mainGrid,
 .subGrid {
@@ -139,9 +140,6 @@ main {
     line-height: 20px;
     color: #282828;
 }
-.category{
-    margin-left: 15px;
-}
 
 .subGrid {
     display: grid;
@@ -151,10 +149,9 @@ main {
 .subGridCategory {
     display: flex;
     align-items: center;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     width: 100%;
     gap: 10px;
-    overflow: auto;
 }
 
 .subCard {
@@ -170,9 +167,9 @@ main {
     text-align: center;
 }
 .subCard2 {
-    max-width: 300px;
+    max-width: 200px;
     padding: 5px 20px;
-    height: 40px;
+    height: 35px;
     background: rgba(40, 40, 40, 0.3);
     border-radius: 20px;
 
