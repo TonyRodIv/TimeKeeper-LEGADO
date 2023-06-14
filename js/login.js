@@ -26,10 +26,10 @@ document.getElementById('form').addEventListener('submit',
         errorEmail.style.display = 'none';
         for (let i = 0; i < usuarios.length; i++) {
             if (email == usuarios[i].usuario && pass == usuarios[i].senha) {
+                i=5
                 console.log('login efetuado')
                 localStorage.setItem('Login', email)
                 window.location.href = '../pages/home.html'
-                i=5
             }
             else {
                 if (pass == usuarios[i].senha) {
