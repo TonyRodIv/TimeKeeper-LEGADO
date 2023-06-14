@@ -11,14 +11,13 @@
   "theme_color": "#035aa6",
   "categories": [],
   "screenshots": [
-    {
-
-    }
+    {}
   ],
   "icons": [
     {
-      "src": "./img/Logos/Logo icon.svg",
-      "type": "image/x-icon"
+      "src": "./AppImages/ios/512.png",
+      "type": "image/png",
+      "sizes":"512x512"
     }
   ],
   "shortcuts": []
