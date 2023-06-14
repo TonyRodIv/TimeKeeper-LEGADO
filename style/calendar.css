@@ -69,6 +69,7 @@ header {
   backdrop-filter: blur(25px);
   position: fixed;
   top: 0;
+  padding-bottom: 10px;
 }
 
 

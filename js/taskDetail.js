@@ -13,14 +13,13 @@ fetch('../src/data.json')
         let color = infoAulas[i].cor
         if(color == "dark"){
             head.style.backgroundImage = "url('../img/Cards/Icons\ bg\ -\ header.svg')"
+        }else{
+            head.style.backgroundImage = `url('../img/Cards/${color}.svg')`
         }
-        head.style.backgroundImage = `url('../img/Cards/${color}.svg')`
         let atribuicao = infoAulas[i].atribuicao
         if(atribuicao>0){
-            console.log("teste")
             atribuicao = "Pendente"
         }else{
-            console.log("tes")
             atribuicao = "Nenhuma"
         }
 

@@ -239,17 +239,17 @@ fetch('../src/data.json')
         <figure class="${infoAulas[i].cor}" id="normalBigCard" onclick="card${numerosSorteados[i]}()">
           <div class="cardImgBG">
             <article class="infoCard">
-              <p class="titleCard">
+              <p class="titleCardC">
                 ${infoAulas[i].nomeDaAula}
               </p>
-              <p class="infoClass">
+              <p class="infoClassC ">
                 SALA: <span class="infoClassSpan">${infoAulas[i].sala}</span> <br>
                 ANDAR: <span class="infoClassSpan">${infoAulas[i].andar}</span> <br>
                 BLOCO: <span class="infoClassSpan">${infoAulas[i].bloco}</span> <br>
                 DURAÇÃO: <span class="infoClassSpan">${infoAulas[i].duracao}</span>
               </p>
-              <p class="textBoldCard">
-                Hoje às ${infoAulas[i].horario}
+              <p class="textBoldCard horarioB">
+                Hoje às <br> <span> ${infoAulas[i].horario} </span>
               </p>
             </article>
             <article class="infoBar">
