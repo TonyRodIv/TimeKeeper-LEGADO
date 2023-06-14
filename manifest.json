@@ -9,7 +9,10 @@
   "short_name": "TimeKeeper",
   "start_url": "/TimeKeeper/",
   "theme_color": "#035aa6",
-  "categories": [],
+  "categories": [
+    "education",
+    "productivity"
+  ],
   "screenshots": [
     {}
   ],
@@ -20,5 +23,16 @@
       "sizes":"512x512"
     }
   ],
-  "shortcuts": []
+  "shortcuts": [
+    {
+      "name": "Página Inicial",
+      "url": "https://tonyrodiv.github.io/TimeKeeper/pages/home.html",
+      "description": ""
+    },
+    {
+      "name": "TimeKeeper AI",
+      "url": "https://tonyrodiv.github.io/TimeKeeper/pages/timeKeeperAI.html",
+      "description": ""
+    }
+  ]
 }
