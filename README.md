@@ -20,3 +20,8 @@ Com o SENAI TimeKeeper, tanto os professores quanto os alunos podem desfrutar de
 
 
 ![Logo](https://github.com/TonyRodIv/TimeKeeper/blob/main/img/ReadMe/LogoGhb.png?raw=true)
+
+## 🔗 Links
+[![Projeto do Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/file/ngHcqDrzfZ7VfrzydOwrC3/PROJETO-INTEGRADOR---2023?type=design&node-id=668%3A2&t=wOjQjZ1krkPPL7iK-1)
+
+[Link do Protótipo](https://github.com/carloswvas/practice/tree/main/projectCont).
