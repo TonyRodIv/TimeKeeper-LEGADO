@@ -1,0 +1,25 @@
+{
+  "background_color": "#035aa6",
+  "description": "Projeto integrador SENAI",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Senai TimeKeeper",
+  "orientation": "any",
+  "scope": "/index.html",
+  "short_name": "TimeKeeper",
+  "start_url": "/TimeKeeper/",
+  "theme_color": "#035aa6",
+  "categories": [],
+  "screenshots": [
+    {
+
+    }
+  ],
+  "icons": [
+    {
+      "src": "./img/Logos/Logo icon.svg",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": []
+}
