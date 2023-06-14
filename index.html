@@ -16,6 +16,11 @@
 
 <body>
     <main>
+        <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+          navigator.serviceWorker.register('sw.js')
+        }
+      </script>
         <header>
             <!-- <figure><img src="../img/Cards/Icons bg - header.svg" alt="" srcset=""></figure> -->
             <section class="logoContainer">
