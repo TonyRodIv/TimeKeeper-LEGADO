@@ -47,6 +47,7 @@ ul{
 li {
   display: flex;
   padding: 20px;
+  width: 100%;
   max-width: 350px;
   gap: 1rem;
   justify-content:space-evenly ;
@@ -59,7 +60,8 @@ li img {
 }
 
 hr {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -94,7 +96,7 @@ header {
 
 .bellBackground {
   display: flex;
-  background: #f8d05d;
+  background: #165892;
   border-radius: 100%;
   align-items: center;
   justify-content: center;
@@ -102,6 +104,12 @@ header {
   flex-grow: 10px;
   max-width: 62px;
   max-height: 62px;
+}
+
+.notification{
+  width: 90%;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 nav {
