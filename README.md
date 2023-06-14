@@ -4,10 +4,6 @@
 O SENAI TimeKeeper é um aplicativo móvel inovador projetado para revolucionar a organização e comunicação em salas de aula entre professores e alunos. Já aconteceu de você chegar atrasado na aula porque não conseguia encontrar a sala correta ou não sabia qual professor estaria ministrando naquele dia? Ou talvez você tenha enfrentado a frustração de carregar materiais desnecessários e pesados devido à falta de informações. Esses desafios comuns podem gerar estresse e confusão entre os alunos.
 
 
-![Logo](https://github.com/TonyRodIv/TimeKeeper/blob/main/img/ReadMe/LogoGhb.png?raw=true)
-
-
-
 O SENAI TimeKeeper tem como objetivo resolver esses problemas, fornecendo acesso em tempo real a horários de aula atualizados, localizações e quaisquer alterações que possam ocorrer. Com sua interface intuitiva e recurso de geolocalização integrado, o aplicativo garante um planejamento sem esforço e navegação eficiente. Diga adeus à ansiedade de procurar por salas de aula e à irritação de chegar atrasado.
 
 ![App Screenshot](https://github.com/TonyRodIv/TimeKeeper/blob/main/img/ReadMe/SENAI%20TIMEKEEPER.png?raw=true)
@@ -21,3 +17,6 @@ Além de suas funcionalidades práticas, o SENAI TimeKeeper possui um sistema de
 ![App Screenshot](https://github.com/TonyRodIv/TimeKeeper/blob/main/img/ReadMe/TIMEKEEPER%20AI.png?raw=true)
 
 Com o SENAI TimeKeeper, tanto os professores quanto os alunos podem desfrutar de uma comunicação aprimorada. Os professores podem informar facilmente os alunos sobre alterações de horário e localizações, enquanto os alunos recebem notificações em tempo real, ajudando-os a se manterem organizados e pontuais. Esse aplicativo abrangente coloca todas as informações necessárias na palma da sua mão, capacitando os alunos a gerenciar efetivamente seus horários de aula.
+
+
+![Logo](https://github.com/TonyRodIv/TimeKeeper/blob/main/img/ReadMe/LogoGhb.png?raw=true)
