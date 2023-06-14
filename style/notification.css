@@ -12,7 +12,8 @@ body {
 header {
   display: flex;
   align-items: center;
-  margin-top: 1.5rem;
+  padding-top: 1rem;
+  position: fixed;
 }
 
 .HeaderTitle {
@@ -24,6 +25,10 @@ header {
 .navSpace{
   width: 100%;
   height: 80px;
+}
+.navSpace1{
+  width: 100%;
+  height: 60px;
 }
 
  .Data {

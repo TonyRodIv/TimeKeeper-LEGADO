@@ -242,6 +242,11 @@ border-radius: 20px 20px 6px 20px;
   justify-content: flex-end;
   align-items: center;
   overflow: auto;
+  padding-bottom: 20px;
+}
+.navSpace{
+  width: 100%;
+  height: 150px;
 }
 
 
