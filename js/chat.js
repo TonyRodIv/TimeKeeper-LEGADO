@@ -43,9 +43,7 @@ fetch('../src/data.json')
 
 
 
-        const tst1 = ["sk-YdqdjH1Ct", "T3BlbkFJXPcPWuZ"]
-        const tst2 = ["fRTmbjYrib6", "sCmX8YLHubvow"]
-        let OPENAI_API_KEY = `${tst1[0]}${tst2[0]}${tst1[1]}${tst2[1]}`;
+        let OPENAI_API_KEY = ``;
         
         let homeQuestionI = localStorage.getItem('homeQuestion')
         localStorage.removeItem('homeQuestion');
