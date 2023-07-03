@@ -98,7 +98,8 @@ fetch('../src/data.json')
                     } else {
                         writeChat.innerHTML += `
                         <section class="result">
-                    <figure id="result"><strong> ERRO! ${json.error.message} NENHUMA CHAVE API FOI ENCONTRADA:</strong><br> Por favor aperte no botão "beta" na parte superior da tela e digite uma nova chave API para continuar usando o TimeKeeper AI ou consulte o suporte do SENAI TimeKeeper.
+                    <figure id="result"><strong> ERRO! ${json.error.message} NENHUMA CHAVE API FOI ENCONTRADA:</strong><br> Por favor aperte no botão "beta" na parte superior da tela e digite uma nova chave API para continuar usando o TimeKeeper AI ou consulte o suporte do SENAI TimeKeeper. <br><br> <a href="https://platform.openai.com/account/api-keys">Clique Aqui para ser redirecionado ao site de chaves API da OPEN AI</a>
+
                     </figure>
                 </section>
                         `
