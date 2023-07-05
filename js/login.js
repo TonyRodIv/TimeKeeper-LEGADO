@@ -20,17 +20,24 @@ const usuarios = [
         senha: '12345678'
     }
 ]
+
+let email = document.getElementById('email').value
+let pass = document.getElementById('password').value
+let passColor = document.getElementById('password')
+let emailColor = document.getElementById('email')
+
+let googleFast = document.getElementById('googleFast')
+let errorEmail = document.getElementById('errorEmail')
+let errorPass = document.getElementById('errorPass')
+
+googleFast.addEventListener('click',()=>{
+    email = 'aluno@es.estudante.senai.br'
+    pass = '12345678'
+})
+
 document.getElementById('form').addEventListener('submit',
     function validate(event) {
         event.preventDefault();
-
-        let email = document.getElementById('email').value
-        let pass = document.getElementById('password').value
-        let passColor = document.getElementById('password')
-        let emailColor = document.getElementById('email')
-
-        let errorEmail = document.getElementById('errorEmail')
-        let errorPass = document.getElementById('errorPass')
 
         passColor.style.border = "none";
         errorPass.style.display = 'none';
