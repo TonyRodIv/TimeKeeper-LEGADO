@@ -61,8 +61,17 @@ fetch('../src/data.json')
             SendQuestion(OPENAI_API_KEY)
         });
         betaNewKey.addEventListener("click", () => {
-            let newKey = window.prompt("Digite uma nova chave API \n Não se preocupe, essa chave não será salva pelo site")
+            console.log('ola')
+            const modalERR = document.getElementById("modalERR");
+            let newAPIKEY = document.getElementById("apiky").value;
+            modalERR.style.display = 'inline-flex';
+            let newKey = newAPIKEY;
+            // let newKey = window.prompt("Digite uma nova chave API \n Não se preocupe, essa chave não será salva pelo site")
             SendQuestion(newKey)
+        });
+        const goChat = document.getElementById("goChat");
+        goChat.addEventListener("click", () => {
+            modalERR.style.display = 'none';
         });
 
         function SendQuestion(key) {

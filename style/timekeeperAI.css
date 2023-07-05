@@ -24,6 +24,96 @@ header {
   padding-bottom: 5px;
 }
 
+/* MODAL ERRO */
+.modal {
+  display: none;
+  position: absolute;
+  transition: opacity 1s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 455px;
+  min-height: 293px;
+  padding: 25px 26px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 18px;
+
+  border-radius: 20px;
+  background: rgba(251, 251, 251, 0.90);
+  box-shadow: 5px 5px 250px 1000px #fefefec7;
+  backdrop-filter: blur(50px);
+  border: 1px solid rgb(206, 206, 206);
+  font-family: 'Poppins';
+}
+
+.headModal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #282828;
+  font-size: 20px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.descriptionModal {
+  color: #282828;
+  text-align: justify;
+  font-size: 14px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.buttonsModal{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.buttonReload {
+  width: 302px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(134deg, #244679 0%, #6B8AB9 100%);
+
+
+  color: #FFF;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+}
+
+.buttonGoAway {
+  width: 302px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(188, 188, 188, 0.50);
+  background: rgba(251, 251, 251, 0.50);
+
+
+  color: #7D7D7D;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  font-family: 'Roboto';
+  line-height: normal;
+}
+
+/* MODAL ERRO */
+
 .HeaderTitle {
   font-weight: bold;
   font-size: 32px;
