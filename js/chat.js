@@ -63,14 +63,13 @@ fetch('../src/data.json')
         betaNewKey.addEventListener("click", () => {
             console.log('ola')
             const modalERR = document.getElementById("modalERR");
-            let newAPIKEY = document.getElementById("apiky").value;
             modalERR.style.display = 'inline-flex';
-            let newKey = newAPIKEY;
             // let newKey = window.prompt("Digite uma nova chave API \n Não se preocupe, essa chave não será salva pelo site")
-            SendQuestion(newKey)
         });
         const goChat = document.getElementById("goChat");
         goChat.addEventListener("click", () => {
+            let newAPIKEY = document.getElementById("apiky").value;
+            SendQuestion(newAPIKEY)
             modalERR.style.display = 'none';
         });
 
