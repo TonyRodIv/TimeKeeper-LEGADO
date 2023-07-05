@@ -1,4 +1,5 @@
 const modalERR = document.getElementById("modalERR");
+let goAway = document.getElementById('goAway')
 screenTest()
 function screenTest() {
     let screenWidth = window.innerWidth;
@@ -8,6 +9,9 @@ function screenTest() {
         modalERR.style.display = 'none'
     }
 }
+goAway.addEventListener('click',()=>{
+    modalERR.style.display = 'none'
+})
 window.addEventListener("resize", screenTest);
 
 const usuarios = [
