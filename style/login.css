@@ -66,12 +66,14 @@ form{
 input{
     width: 100%;
     max-width: 350px;
-    padding: 20px;
     height: 65px;
     background: #FAFAFA;
     border: 0.5px solid #D8D8D8;
     border-radius: 12px;
     margin: 0 auto;
+}
+#password,#email{
+    padding: 20px;
 }
 .formDiv{
     width: 100%;
