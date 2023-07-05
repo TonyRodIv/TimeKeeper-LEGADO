@@ -6,6 +6,11 @@
       "data": "Hoje"
     },
     {
+      "titulo": "Novo local de aula",
+      "descricao": "A aula de Matemática de hoje foi realocada para o bloco B.",
+      "data": ""
+    },
+    {
       "titulo": "Atividade extracurricular",
       "descricao": "Na sexta-feira, haverá uma atividade extracurricular de ciências.",
       "data": "1 dia atrás"
@@ -21,9 +26,14 @@
       "data": ""
     },
     {
-      "titulo": "Recesso escolar",
-      "descricao": "Lembre-se de que a próxima semana é o recesso escolar.",
+      "titulo": "Nova atividade",
+      "descricao": "Peça os detalhes da atividade ao seu professor!!",
       "data": "2 dias atrás"
+    },
+    {
+      "titulo": "Novo professor",
+      "descricao": "Temos um novo professor de História",
+      "data": ""
     }
   ]
 

@@ -1,3 +1,15 @@
+const modalERR = document.getElementById("modalERR");
+screenTest()
+function screenTest() {
+    let screenWidth = window.innerWidth;
+    if(screenWidth>800){
+        modalERR.style.display = 'inline-flex'
+    }else{
+        modalERR.style.display = 'none'
+    }
+}
+window.addEventListener("resize", screenTest);
+
 const usuarios = [
     {
         usuario: 'email@email.com',

@@ -20,3 +20,10 @@ function delayedFunction() {
       localStorage.setItem(`CardOrder${i}`, numerosSorteados[i])
     }
   
+
+    function isScreenLarge() {
+      // Obter a largura da tela
+      let screenWidth = window.innerWidth;
+      // Retornar verdadeiro se for maior que 800px, falso caso contrário
+      
+    }
