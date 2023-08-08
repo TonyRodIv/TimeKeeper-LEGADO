@@ -1,13 +1,15 @@
 let mesAnterior = null;
 let diaAnterior = null;
 
-fetch("../src/data.json")
-  .then((response) => response.json())
-  .then((infoAulas) => {
+fetch('../src/data.json')
+  .then(response => response.json())
+  .then(infoAulas => {
     // Função para criar o carrossel de meses
     function criarCarrosselMeses() {
       const mesesCarousel = document.querySelector(".meses-carousel");
       const diasCarousel = document.querySelector(".dias-carousel");
+
+
       const dataAtual = new Date();
       const mesAtual = dataAtual.getMonth();
       const meses = {
@@ -19,15 +21,17 @@ fetch("../src/data.json")
         ),
         proximo: new Intl.DateTimeFormat("pt-BR", { month: "long" }).format(
           new Date(dataAtual.getFullYear(), mesAtual + 1)
-        ),
+        )
       };
-      
+
       for (const mes in meses) {
         const elemento = document.createElement("button");
         elemento.classList.add("mes");
         elemento.textContent = meses[mes];
         mesesCarousel.appendChild(elemento);
         elemento.addEventListener("click", function () {
+
+
           // Remove os estilos do botão de mês anteriormente clicado
           if (mesAnterior) {
             mesAnterior.style.fontSize = "";
@@ -49,20 +53,15 @@ fetch("../src/data.json")
           const diaAtual = new Date().getDate();
 
           // Calcula a data do dia atual e o intervalo de dias a exibir
-          const dataDia = new Date(
-            dataAtual.getFullYear(),
-            dataAtual.getMonth(),
-            diaAtual
-          );
+          const dataDia = new Date(dataAtual.getFullYear(), dataAtual.getMonth(), diaAtual);
           const diaInicio = new Date(dataDia);
           diaInicio.setDate(diaInicio.getDate() - 3); // 5 dias anteriores
           const diaFim = new Date(dataDia);
           diaFim.setDate(diaFim.getDate() + 3); // 5 dias posteriores
 
           for (const dia of diasMes) {
-            
             // Verifica se o dia está dentro do intervalo desejado
-            if (dia >= diaInicio.getDate() || dia <= diaFim.getDate()) {
+            if (dia >= diaInicio.getDate() && dia <= diaFim.getDate()) {
               const diaElemento = document.createElement("div");
               diaElemento.classList.add("dia");
               diaElemento.textContent = dia;
@@ -82,22 +81,29 @@ fetch("../src/data.json")
                   this.style.color = "#ffffff"; // exemplo de cor do texto
                 }
 
+
+
+
                 // Armazena a referência do botão de dia anteriormente clicado
                 diaAnterior = this;
 
                 // Lógica para executar ação quando o botão de dia for clicado
                 console.log("Você clicou no dia:", dia);
-                const date = new Date();
+                const date = new Date()
                 if (dia != date.getDate()) {
-                  sorteio();
+                  sorteio()
                 } else {
-                  dataAtualS();
+                  dataAtualS()
                 }
                 // Adicione aqui a lógica para estilizar ou fazer alterações no botão de dia clicado
               });
             }
           }
         });
+
+
+
+
       }
     }
 
@@ -107,21 +113,9 @@ fetch("../src/data.json")
       const mesAtual = dataAtual.getMonth();
       const mesAnterior = new Date(dataAtual.getFullYear(), mesAtual - 1);
       const proximoMes = new Date(dataAtual.getFullYear(), mesAtual + 1);
-      const diasAnterior = new Date(
-        mesAnterior.getFullYear(),
-        mesAnterior.getMonth() + 1,
-        0
-      ).getDate();
-      const diasAtual = new Date(
-        dataAtual.getFullYear(),
-        mesAtual + 1,
-        0
-      ).getDate();
-      const diasProximo = new Date(
-        proximoMes.getFullYear(),
-        proximoMes.getMonth() + 1,
-        0
-      ).getDate();
+      const diasAnterior = new Date(mesAnterior.getFullYear(), mesAnterior.getMonth() + 1, 0).getDate();
+      const diasAtual = new Date(dataAtual.getFullYear(), mesAtual + 1, 0).getDate();
+      const diasProximo = new Date(proximoMes.getFullYear(), proximoMes.getMonth() + 1, 0).getDate();
 
       switch (mes) {
         case "anterior":
@@ -137,9 +131,9 @@ fetch("../src/data.json")
 
     // Função para carregar os dados do arquivo JSON e criar o carrossel
     function carregarDados() {
-      fetch("../src/calendar.json")
-        .then((response) => response.json())
-        .then((data) => {
+      fetch('../src/calendar.json')
+        .then(response => response.json())
+        .then(data => {
           const meses = data.meses;
           const dias = data.dias;
 
@@ -147,7 +141,7 @@ fetch("../src/data.json")
 
           // Obter data atual
           const dataAtual = new Date();
-          const mesAtual = dataAtual.toLocaleString("pt-BR", { month: "long" });
+          const mesAtual = dataAtual.toLocaleString('pt-BR', { month: 'long' });
 
           // Percorrer os botões de mês para encontrar o correspondente à data atual
           const botoesMes = document.querySelectorAll(".mes");
@@ -157,30 +151,28 @@ fetch("../src/data.json")
               element.click(); // Clica no botão de mês atual
 
               // Obtém o botão de dia atual
-              const botaoDiaAtual = document.querySelector(
-                ".dia[data-dia='" + dataAtual.getDate() + "']"
-              );
+              const botaoDiaAtual = document.querySelector(".dia[data-dia='" + dataAtual.getDate() + "']");
               if (botaoDiaAtual) {
                 botaoDiaAtual.click(); // Clica no botão de dia atual
               }
             }
           });
         })
-        .catch((error) => console.error(error));
+        .catch(error => console.error(error));
     }
 
     // FAZ A SCROLLBAR IR ATÉ O MÊS E DIA ATUAL
-    window.addEventListener("load", function () {
-      const mesesScroll = document.getElementById("mesesCarousel");
+    window.addEventListener('load', function () {
+      const mesesScroll = document.getElementById('mesesCarousel');
       const dataAtual = new Date();
       const mesAtual = dataAtual.getMonth();
       const posicaoDesejadaMes = 96.5 * mesAtual;
       mesesScroll.scrollLeft = posicaoDesejadaMes;
     });
 
-    window.addEventListener("load", function () {
+    window.addEventListener('load', function () {
       const dataAtual = new Date();
-      const diasScroll = document.getElementById("diasCarousel");
+      const diasScroll = document.getElementById('diasCarousel');
       const diaAtual = dataAtual.getDate();
       const posicaoDesejadaDia = 16 * diaAtual;
       diasScroll.scrollLeft = posicaoDesejadaDia;
@@ -189,14 +181,17 @@ fetch("../src/data.json")
     // Chamada da função para carregar os dados
     carregarDados();
 
+
+
     //ESCRITA DOS CARDS
-    let writeCard = document.getElementById("writeCards");
+    let writeCard = document.getElementById('writeCards');
+
     const numerosSorteados = [];
     function sorteio() {
       while (numerosSorteados.length) {
         numerosSorteados.pop();
       }
-      console.log(numerosSorteados);
+      console.log(numerosSorteados)
 
       while (numerosSorteados.length < 6) {
         const numero = Math.floor(Math.random() * 6);
@@ -204,9 +199,9 @@ fetch("../src/data.json")
           numerosSorteados.push(numero);
         }
       }
-      console.log(numerosSorteados);
-      localStorage.setItem("localRandomNum", numerosSorteados);
-      loadCards();
+      console.log(numerosSorteados)
+      localStorage.setItem('localRandomNum',numerosSorteados)
+      loadCards()
     }
     function dataAtualS() {
       while (numerosSorteados.length) {
@@ -215,19 +210,22 @@ fetch("../src/data.json")
       for (let i = 0; i < 6; i++) {
         numerosSorteados.push(localStorage.getItem(`CardOrder${i}`));
       }
-      console.log(numerosSorteados, "carregando data atual");
-      localStorage.setItem("localRandomNum", numerosSorteados);
-      loadCards();
+      console.log(numerosSorteados, "carregando data atual")
+      localStorage.setItem('localRandomNum',numerosSorteados)
+      loadCards()
     }
 
+
+
     function loadCards() {
+
       const horarios = [
-        { horario: "07:15", id: "1" },
-        { horario: "08:45", id: "2" },
-        { horario: "10:30", id: "3" },
-        { horario: "12:30", id: "4" },
-        { horario: "14:15", id: "5" },
-        { horario: "15:45", id: "6" },
+        { horario: "07:15", id: '1' },
+        { horario: "08:45", id: '2' },
+        { horario: "10:30", id: '3' },
+        { horario: "12:30", id: '4' },
+        { horario: "14:15", id: '5' },
+        { horario: "15:45", id: '6' }
       ];
       for (let i = 0; i < infoAulas.length; i++) {
         infoAulas[numerosSorteados[i]].id = horarios[i].id;
@@ -235,7 +233,7 @@ fetch("../src/data.json")
       }
 
       infoAulas.sort((a, b) => a.id - b.id);
-      writeCard.innerHTML = "";
+      writeCard.innerHTML = ""
       for (let i = 0; i < infoAulas.length; i++) {
         writeCard.innerHTML += `
         <figure class="${infoAulas[i].cor}" id="normalBigCard" onclick="card${numerosSorteados[i]}()">
@@ -268,45 +266,46 @@ fetch("../src/data.json")
     console.log(infoAulas);
   });
 
-const horarios = [
-  { horario: "07:15", id: "1" },
-  { horario: "08:45", id: "2" },
-  { horario: "10:30", id: "3" },
-  { horario: "12:30", id: "4" },
-  { horario: "14:15", id: "5" },
-  { horario: "15:45", id: "6" },
-];
-let numerosSorteadosDetail = localStorage.getItem("localRandomNum");
-numerosSorteadosDetail = numerosSorteadosDetail.split(",");
-console.log(numerosSorteadosDetail);
+  const horarios = [
+    { horario: "07:15", id: '1' },
+    { horario: "08:45", id: '2' },
+    { horario: "10:30", id: '3' },
+    { horario: "12:30", id: '4' },
+    { horario: "14:15", id: '5' },
+    { horario: "15:45", id: '6' }
+  ];
+  let numerosSorteadosDetail =localStorage.getItem('localRandomNum')
+  numerosSorteadosDetail = numerosSorteadosDetail.split(",");
+  console.log(numerosSorteadosDetail)
 
+  
 function card0() {
-  localStorage.setItem("cardDetail", 0);
-  localStorage.setItem("horario", horarios[numerosSorteadosDetail[0]].horario);
-  window.location.href = "./taskDetail.html";
+  localStorage.setItem("cardDetail", 0)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[0]].horario)
+  window.location.href = './taskDetail.html'
 }
 function card1() {
-  localStorage.setItem("cardDetail", 1);
-  localStorage.setItem("horario", horarios[numerosSorteadosDetail[1]].horario);
-  window.location.href = "./taskDetail.html";
+  localStorage.setItem("cardDetail", 1)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[1]].horario)
+  window.location.href = './taskDetail.html'
 }
 function card2() {
-  localStorage.setItem("cardDetail", 2);
-  localStorage.setItem("horario", horarios[numerosSorteadosDetail[2]].horario);
-  window.location.href = "./taskDetail.html";
+  localStorage.setItem("cardDetail", 2)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[2]].horario)
+  window.location.href = './taskDetail.html'
 }
 function card3() {
-  localStorage.setItem("cardDetail", 3);
-  localStorage.setItem("horario", horarios[numerosSorteadosDetail[3]].horario);
-  window.location.href = "./taskDetail.html";
+  localStorage.setItem("cardDetail", 3)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[3]].horario)
+  window.location.href = './taskDetail.html'
 }
 function card4() {
-  localStorage.setItem("cardDetail", 4);
-  localStorage.setItem("horario", horarios[numerosSorteadosDetail[4]].horario);
-  window.location.href = "./taskDetail.html";
+  localStorage.setItem("cardDetail", 4)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[4]].horario)
+  window.location.href = './taskDetail.html'
 }
 function card5() {
-  localStorage.setItem("cardDetail", 5);
-  localStorage.setItem("horario", horarios[numerosSorteadosDetail[5]].horario);
-  window.location.href = "./taskDetail.html";
+  localStorage.setItem("cardDetail", 5)
+  localStorage.setItem("horario", horarios[numerosSorteadosDetail[5]].horario)
+  window.location.href = './taskDetail.html'
 }
