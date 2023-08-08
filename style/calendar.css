@@ -10,7 +10,15 @@ main {
   padding-bottom: 50px;
 }
 
-.meses-carousel,
+.meses-carousel{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0px;
+  overflow: auto;
+  justify-content: center;
+}
+
 .dias-carousel {
   display: flex;
   align-items: center;
@@ -40,6 +48,7 @@ main {
   border: none;
   background-color: transparent;
   color: #696969;
+  /* min-width: 120px; */
 }
 
 
