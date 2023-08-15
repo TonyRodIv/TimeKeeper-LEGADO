@@ -3,6 +3,7 @@ const inputQuestion = document.getElementById("inputQuestion");
 const sendA = document.getElementById("send");
 const betaNewKey = document.getElementById("picBeta");
 const writeChat = document.getElementById("chat");
+let OPENAI_API_KEY = ``;
 let date = new Date()
 console.log(date)
 const regrasGPT = [
@@ -17,6 +18,7 @@ let writeGreetings = document.getElementById('writeGreetings')
 fetch('../src/data.json')
     .then(response => response.json())
     .then(infoAulas => {
+        console.log(`CHAVE API ATUAL: ${OPENAI_API_KEY}`)
         const numerosSorteados = [];
         console.log(numerosSorteados)
         for (let i = 0; i < 6; i++) {
@@ -41,9 +43,6 @@ fetch('../src/data.json')
         // console.log(texto);
         console.log(infoAulas);
 
-
-
-        let OPENAI_API_KEY = ``;
         
         let homeQuestionI = localStorage.getItem('homeQuestion')
         localStorage.removeItem('homeQuestion');
@@ -69,13 +68,15 @@ fetch('../src/data.json')
         const goChat = document.getElementById("goChat");
         goChat.addEventListener("click", () => {
             let newAPIKEY = document.getElementById("apiky").value;
-            SendQuestion(newAPIKEY)
+            console.log(newAPIKEY)
+            OPENAI_API_KEY = newAPIKEY;
+            SendQuestion(OPENAI_API_KEY)
             modalERR.style.display = 'none';
         });
 
         function SendQuestion(key) {
             let sQuestion = inputQuestion.value;
-
+            console.log(`CHAVE API ATUAL NO PROMPT: ${key}`)
             fetch("https://api.openai.com/v1/completions", {
                 method: "POST",
                 headers: {
