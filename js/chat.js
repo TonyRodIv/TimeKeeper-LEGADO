@@ -1,4 +1,4 @@
-
+// Antony (@TonyRodIv)
 const inputQuestion = document.getElementById("inputQuestion");
 const sendA = document.getElementById("send");
 const betaNewKey = document.getElementById("picBeta");
