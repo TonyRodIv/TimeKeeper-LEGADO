@@ -1,3 +1,4 @@
+// Antony (@TonyRodIv)
 let head = document.getElementById('head')
 let title = document.getElementById('title')
 let mainGrid = document.getElementById('mainGrid')
