@@ -1,3 +1,4 @@
+// Antony (@TonyRodIv)
 const modalERR = document.getElementById("modalERR");
 let goAway = document.getElementById('goAway')
 screenTest()
