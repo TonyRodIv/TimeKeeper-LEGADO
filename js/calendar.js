@@ -1,3 +1,4 @@
+// Glaucos (@BigGlaucos)
 let mesAnterior = null;
 let diaAnterior = null;
 
