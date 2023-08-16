@@ -1,3 +1,4 @@
+// Glaucos (@BigGlaucos)
 const exit = document.getElementById('exit')
 
 exit.addEventListener('click',()=>{
