@@ -1,3 +1,4 @@
+// Antony (@TonyRodIv)
 function delayedFunction() {
   let login = localStorage.getItem('Login')
   if(login === null){
