@@ -1,3 +1,4 @@
+// Glaucos (@BigGlaucos)
 let WriteNotification = document.getElementById('Notification');
 
 fetch('../src/notification.json')
