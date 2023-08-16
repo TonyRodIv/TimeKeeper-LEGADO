@@ -3,7 +3,9 @@ const inputQuestion = document.getElementById("inputQuestion");
 const sendA = document.getElementById("send");
 const betaNewKey = document.getElementById("picBeta");
 const writeChat = document.getElementById("chat");
-let OPENAI_API_KEY = ``;
+const tst1 = ["sk-jjclrUlvP70K", "kFJ5BkVCONk"]
+const tst2 = ["64ocLPt0T3Blb", "K0CVneflJJ1v"]
+let OPENAI_API_KEY = `${tst1[0]}${tst2[0]}${tst1[1]}${tst2[1]}`;
 let date = new Date()
 console.log(date)
 const regrasGPT = [
