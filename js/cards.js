@@ -1,3 +1,4 @@
+// Antony (@TonyRodIv)
 let writeCard = document.getElementById('writeCards')
 let writeGreetings = document.getElementById('writeGreetings')
 let inputQuestion = document.getElementById('chatInit')
