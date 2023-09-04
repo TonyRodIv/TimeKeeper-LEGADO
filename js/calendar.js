@@ -94,7 +94,7 @@ fetch('../src/data.json')
                 if (dia != date.getDate()) {
                   sorteio()
                 } else {
-                  dataAtualS()
+                  dataAtualS(infoAulas)
                 }
                 // Adicione aqui a lógica para estilizar ou fazer alterações no botão de dia clicado
               });
@@ -129,7 +129,6 @@ fetch('../src/data.json')
           return [];
       }
     }
-
     // Função para carregar os dados do arquivo JSON e criar o carrossel
     function carregarDados() {
       fetch('../src/calendar.json')
@@ -155,6 +154,7 @@ fetch('../src/data.json')
               const botaoDiaAtual = document.querySelector(".dia[data-dia='" + dataAtual.getDate() + "']");
               if (botaoDiaAtual) {
                 botaoDiaAtual.click(); // Clica no botão de dia atual
+
               }
             }
           });
@@ -201,7 +201,7 @@ fetch('../src/data.json')
         }
       }
       console.log(numerosSorteados)
-      localStorage.setItem('localRandomNum',numerosSorteados)
+      localStorage.setItem('localRandomNum', numerosSorteados)
       loadCards()
     }
     function dataAtualS() {
@@ -212,8 +212,8 @@ fetch('../src/data.json')
         numerosSorteados.push(localStorage.getItem(`CardOrder${i}`));
       }
       console.log(numerosSorteados, "carregando data atual")
-      localStorage.setItem('localRandomNum',numerosSorteados)
-      loadCards()
+      localStorage.setItem('localRandomNum', numerosSorteados)
+      loadCards(infoAulas)
     }
 
 
@@ -267,19 +267,18 @@ fetch('../src/data.json')
     console.log(infoAulas);
   });
 
-  const horarios = [
-    { horario: "07:15", id: '1' },
-    { horario: "08:45", id: '2' },
-    { horario: "10:30", id: '3' },
-    { horario: "12:30", id: '4' },
-    { horario: "14:15", id: '5' },
-    { horario: "15:45", id: '6' }
-  ];
-  let numerosSorteadosDetail =localStorage.getItem('localRandomNum')
-  numerosSorteadosDetail = numerosSorteadosDetail.split(",");
-  console.log(numerosSorteadosDetail)
+const horarios = [
+  { horario: "07:15", id: '1' },
+  { horario: "08:45", id: '2' },
+  { horario: "10:30", id: '3' },
+  { horario: "12:30", id: '4' },
+  { horario: "14:15", id: '5' },
+  { horario: "15:45", id: '6' }
+];
+let numerosSorteadosDetail = localStorage.getItem('localRandomNum')
+numerosSorteadosDetail = numerosSorteadosDetail.split(",");
+console.log(numerosSorteadosDetail)
 
-  
 function card0() {
   localStorage.setItem("cardDetail", 0)
   localStorage.setItem("horario", horarios[numerosSorteadosDetail[0]].horario)
