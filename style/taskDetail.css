@@ -274,15 +274,17 @@ nav {
 .navIcons a img {
     width: 100%;
 }
-
+.modal , .modal2{
+    
+}
 .modal{
 border-radius: 25px;
 background: rgba(254, 254, 254, 1);
 box-shadow: 0px 4px 20px 800px rgba(10, 10, 10, 0.60);
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: start;
-    height: 500px;
+    height: 300px;
     position: relative;
     z-index: 0;
     width: 395px;
@@ -291,6 +293,21 @@ box-shadow: 0px 4px 20px 800px rgba(10, 10, 10, 0.60);
     padding: 10px;
     gap: 1rem;
 }
+
+.modal2{
+background: rgba(254, 254, 254, 1);
+box-shadow: 0px 4px 20px 800px rgba(10, 10, 10, 0.60);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    position: relative;
+    z-index: 0;
+    width: 395px;
+    border-radius: 10px;
+    bottom: 240px;
+    padding: 10px;
+} 
 
 .descricao{
     color: #ACACAC;
@@ -307,4 +324,36 @@ box-shadow: 0px 4px 20px 800px rgba(10, 10, 10, 0.60);
 }
 .ModalTitlle{
     margin:0 auto;
+}
+
+button {
+    border-radius: 15px; 
+    width: 170px;
+    height: 45px;
+    text-align: center;
+    font-family: Roboto Slab;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.entrega{
+  border: 1px solid #9E9E9E;
+    background: #F9F9F9;
+}
+
+.professor{
+      border: 1px solid #806BA0;
+    background: #CAC0E3;
+    color: #36175E;
+}
+.wrapperButton{
+display: flex;
+align-items: center;
+margin: 0 auto;
+gap: 20px;
+}
+
+
+.map{
+    position:center;
 }
