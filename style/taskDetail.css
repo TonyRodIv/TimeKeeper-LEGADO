@@ -295,7 +295,8 @@ gap: 1rem;
 }
 
 .modal2{
-     display: none;
+     display: flex;
+     align-items: center;
 }
 
 
