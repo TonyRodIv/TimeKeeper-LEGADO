@@ -274,40 +274,30 @@ nav {
 .navIcons a img {
     width: 100%;
 }
+
 .modal , .modal2{
-    
-}
-.modal{
 border-radius: 25px;
 background: rgba(254, 254, 254, 1);
 box-shadow: 0px 4px 20px 800px rgba(10, 10, 10, 0.60);
-    display: none;
-    flex-direction: column;
-    align-items: start;
-    height: 300px;
-    position: relative;
-    z-index: 0;
-    width: 395px;
-    border-radius: 10px;
-    bottom: 240px;
-    padding: 10px;
-    gap: 1rem;
+flex-direction: column;
+align-items: start;
+height: 300px;
+position: relative;
+z-index: 0;
+width: 395px;
+border-radius: 10px;
+bottom: 240px;
+padding: 10px;
+gap: 1rem;
+}
+.modal{
+     display: none;
 }
 
 .modal2{
-background: rgba(254, 254, 254, 1);
-box-shadow: 0px 4px 20px 800px rgba(10, 10, 10, 0.60);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 300px;
-    position: relative;
-    z-index: 0;
-    width: 395px;
-    border-radius: 10px;
-    bottom: 240px;
-    padding: 10px;
-} 
+     display: none;
+}
+
 
 .descricao{
     color: #ACACAC;
