@@ -249,7 +249,7 @@ nav {
     min-height: 55px;
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
-
+    z-index: 1;
     backdrop-filter: blur(25px);
     display: flex;
     flex-direction: column;
@@ -263,6 +263,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     margin: 0px 10px;
+    z-index: 1;
 }
 
 .navIcons a {
@@ -272,4 +273,13 @@ nav {
 
 .navIcons a img {
     width: 100%;
+}
+
+.modal{
+    background-color: black;
+    height: 500px;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    border-radius: 10px;
 }
