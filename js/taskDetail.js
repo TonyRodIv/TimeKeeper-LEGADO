@@ -96,69 +96,29 @@ com Professor </button>
 
 
 
-
 // Função para abrir o modal
 function AbrirModal() {
     setTimeout(function () {
         document.getElementById("modal1").style.display = "flex";
     }, 200); // 1000 milissegundos (1 segundo)
+    document.getElementById("bgM").style.display = "flex";
 }
-
-// Função para fechar o modal
-function FecharModal() {
-    document.getElementById("modal1").style.display = "none";
-}
-
-// Função para alternar entre abrir e fechar o modal
-function AlternarModal() {
-    var modal = document.getElementById("modal1");
-    if (modal.style.display === "flex") {
-        FecharModal(); // Se o modal estiver aberto, fecha
-    } else {
-        AbrirModal(); // Se o modal estiver fechado, abre
-    }
-}
-
-// Adicione um ouvinte de evento de clique ao elemento raiz do documento
-document.addEventListener("click", function (event) {
-    var modal = document.getElementById("modal1");
-    // Verifique se o clique ocorreu fora do modal
-    if (event.target !== modal && modal.style.display === "flex") {
-        FecharModal(); // Fecha o modal se o clique foi fora do modal e o modal está aberto
-    }
-});
-
-
-
-
-
 
 function AbrirModal2() {
     setTimeout(function () {
         document.getElementById("modal2").style.display = "flex";
     }, 200); // 1000 milissegundos (1 segundo)
+    document.getElementById("bgM").style.display = "flex";
 }
 
-// Função para fechar o modal
-function FecharModal2() {
-    document.getElementById("modal2").style.display = "none";
-}
+function fechar() {
 
-// Função para alternar entre abrir e fechar o modal
-function AlternarModal2() {
-    var modal = document.getElementById("modal2");
-    if (modal.style.display === "flex") {
-        FecharModal2(); // Se o modal estiver aberto, fecha
-    } else {
-        AbrirModal2(); // Se o modal estiver fechado, abre
+    window.onclick = function (e) {
+        if (e.target == document.getElementById("bgM")) {
+            document.getElementById("modal2").style.display = "none";
+            document.getElementById("modal1").style.display = "none";
+            document.getElementById("bgM").style.display = "none";
+        }
     }
-}
 
-// Adicione um ouvinte de evento de clique ao elemento raiz do documento
-document.addEventListener("click", function (event) {
-    var modal = document.getElementById("modal2");
-    // Verifique se o clique ocorreu fora do modal
-    if (event.target !== modal && modal.style.display === "flex") {
-        FecharModal2(); // Fecha o modal se o clique foi fora do modal e o modal está aberto
-    }
-});
+}
