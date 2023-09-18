@@ -28,7 +28,7 @@
         <section class="content">
             <figure class="cards">
                 <figure class="mainGrid" id="mainGrid">
-                    <article class="cardM">
+                    <article class="cardM" onclick="AbrirModal2()">
                         <img src="../img/Icons/Maps.svg" alt="">
                         <p class="cardTitle">
                            Ver Localização
@@ -58,23 +58,21 @@
                 </figure>
             </figure>
         </section>
-        <div class="modal">
+        <div class="modal" id="modal1" >
             <h1 class="ModalTitlle">Detalhes da Atribuição</h1>
             <div class="modalWrapper">
             <h2>Descrição</h2>
 
             <p class="descricao">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchang</p>
 
-            <div class="wrapperButton">
-                <button class="entrega">Entregar até <br> quarta-feira</button>
-                <button class="professor" > Entrar em contato <br> 
-com Professor </button>
+            <div class="wrapperButton" id="wrapperButton">
+               
             </div>
         </div>
 
     </div>
     
-    <div class="modal2">
+    <div class="modal2" id="modal2" >
         <h1 class="ModalTitlle">MAPA DA UNIDADE </h1>
         <img class="map" src="../img/Maps/image 19.svg" alt="" srcset="">
     </div>
