@@ -126,6 +126,7 @@ main {
     grid-template-rows: 1fr;
     align-items: center;
     justify-items: center;
+    user-select: none;
 }
 
 .cardTitle {
@@ -170,6 +171,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+    user-select: none;
 }
 
 .subCard2 {
@@ -183,6 +185,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+    user-select: none;
 }
 
 .subCard p {

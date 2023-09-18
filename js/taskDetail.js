@@ -112,7 +112,6 @@ function AbrirModal2() {
 }
 
 function fechar() {
-
     window.onclick = function (e) {
         if (e.target == document.getElementById("bgM")) {
             document.getElementById("modal2").style.display = "none";
@@ -120,5 +119,9 @@ function fechar() {
             document.getElementById("bgM").style.display = "none";
         }
     }
-
+}
+function fecharM() {
+    document.getElementById("modal2").style.display = "none";
+    document.getElementById("modal1").style.display = "none";
+    document.getElementById("bgM").style.display = "none";
 }
