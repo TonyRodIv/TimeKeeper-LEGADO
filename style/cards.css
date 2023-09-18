@@ -6,6 +6,7 @@
     min-height: 140px;
     border-radius: 15px;
     margin: 0 auto;
+    user-select: none;
 }
 
 .normalCard {
@@ -15,6 +16,7 @@
     box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     color: #fff;
+    user-select: none;
 }
 #normalBigCard {
     width: 90%;

@@ -91,11 +91,6 @@ com Professor </button>
         }
     });
 
-
-
-
-
-
 // Função para abrir o modal
 function AbrirModal() {
     setTimeout(function () {
