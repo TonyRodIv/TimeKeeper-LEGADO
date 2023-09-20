@@ -45,7 +45,6 @@ fetch('../src/data.json')
         // console.log(texto);
         console.log(infoAulas);
 
-        
         let homeQuestionI = localStorage.getItem('homeQuestion')
         localStorage.removeItem('homeQuestion');
         if (homeQuestionI === null) {
