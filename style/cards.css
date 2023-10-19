@@ -175,30 +175,32 @@
 
 
 .ad {
-    background: linear-gradient(106.47deg, #373737 7.89%, #366E7E 98.11%);
-    border: 1.5px solid #C6C6C6;
-}
+    background: linear-gradient(92.28deg, #232F6F 5.31%, #3676B2 97.95%),
+linear-gradient(0deg, #C6C6C6, #C6C6C6);
+} 
 
 .dark {
-    background-image: linear-gradient(130.25deg, #343434 3.08%, #161616 97.12%);
+    background: linear-gradient(130.25deg, #AA2828 3.08%, #B59A3E 97.12%);
 }
 
 .blue {
-    background-image: linear-gradient(130.25deg, #6271F1 3.08%, #393F75 97.12%);
+    background: linear-gradient(130.25deg, #3B93E4 3.08%, #6A289D 97.12%);
+
 }
 
 .purple {
-    background-image: linear-gradient(130.25deg, #5D4A90 3.08%, #3B2F5C 97.12%);
+    background: linear-gradient(130.25deg, #C534F5 3.08%, #3715BF 97.12%);
 }
 
 .green {
-    background-image: linear-gradient(130.25deg, #55B68C 3.08%, #325E4A 97.12%);
+    background: linear-gradient(130.25deg, #2EB57C 3.08%, #167885 97.12%);
+
 }
 
 .pink {
-    background-image: linear-gradient(130.25deg, #E16A81 3.08%, #612E38 96.64%);
+    background: linear-gradient(130.25deg, #DD3EB0 3.08%, #AA2646 90.27%);
 }
 
 .gold {
-    background-image: linear-gradient(130.25deg, #D7C176 3.08%, #8B7D48 97.12%);
+    background: linear-gradient(130.03deg, #F0BD09 -5.26%, #BB2222 97.12%);
 }
