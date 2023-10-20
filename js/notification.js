@@ -16,7 +16,7 @@ fetch('../src/notification.json')
       WriteNotification.innerHTML += `
       <h2 class="Data">${notification[i].data}</h2>
       <ul id="Notification">
-      <li>
+      <li class="NotificationText">
           <div class="bellBackground">
             <img src="../img/Icons/Bell.svg" alt="" srcset="">
           </div>

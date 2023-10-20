@@ -174,17 +174,6 @@ main {
     margin: 0 auto;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* BARRA DE NAVEGAÇÃO */
 nav {
     /* display: none; */
@@ -194,15 +183,16 @@ nav {
     max-height: 150px;
     min-height: 55px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    background: #f5f5f5;
+
   
-    backdrop-filter: blur(25px);
+    /* backdrop-filter: blur(25px); */
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 8px;
   }
- .navIcons {
+  .navIcons {
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -215,12 +205,16 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+    
+}
 
-  .Icon img {
-        width: 15%;
+.Icon img {
+    width: 15%;
     max-width: 45px;
     min-width: 25px;
+    background-color: none;
+    
+
   }
 
   .IconDescription{
@@ -228,3 +222,12 @@ nav {
     font-weight: 600;
     font-size: 12px;
 }
+
+
+
+
+
+
+
+
+

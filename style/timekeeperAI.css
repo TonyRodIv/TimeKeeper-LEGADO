@@ -197,20 +197,25 @@ header a img{
   max-height: 62px;
 }
 
+/* BARRA DE NAVEGAÇÃO */
 nav {
-  /* display: none; */
-  position: fixed;
-  bottom: 0;
-  padding: 10px 0px;
-  max-height: 150px;
-  width: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 65.1%);
-  backdrop-filter: blur(25px);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
- .navIcons {
+    /* display: none; */
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0px;
+    max-height: 150px;
+    min-height: 55px;
+    width: 100%;
+    background: #f5f5f5;
+
+  
+    /* backdrop-filter: blur(25px); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+  .navIcons {
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -223,12 +228,16 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+    
+}
 
-  .Icon img {
-        width: 15%;
+.Icon img {
+    width: 15%;
     max-width: 45px;
     min-width: 25px;
+    background-color: none;
+    
+
   }
 
   .IconDescription{
@@ -236,7 +245,6 @@ nav {
     font-weight: 600;
     font-size: 12px;
 }
-
 
 
 .search {

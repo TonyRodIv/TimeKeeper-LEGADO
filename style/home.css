@@ -178,16 +178,29 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+    
+}
 
-  .Icon img {
-        width: 15%;
+.Icon img {
+    width: 15%;
     max-width: 45px;
     min-width: 25px;
+    background-color: none;
+    
+
   }
 
   .IconDescription{
     font-family: 'Roboto';
     font-weight: 600;
     font-size: 12px;
+}
+
+
+
+.Active{
+    background-color: #000;
+    width: 50px;
+    height: 40px;
+   position: absolute;
 }
