@@ -179,10 +179,8 @@ nav {
 .Icon img {
     width: 15%;
     max-width: 45px;
-    min-width: 25px;
-    background-color: none;
-    
-
+    min-width: 20px;
+   
   }
 
   .IconDescription{
