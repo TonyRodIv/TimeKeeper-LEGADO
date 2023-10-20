@@ -28,7 +28,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     font-weight: 500;
-    height: 282px;
+    height: 300px;
 }
 
 .Logo {
@@ -52,7 +52,7 @@ header {
     color: #282828;
     font-weight: 600;
     font-size: 26px;
-    font-weight: 500;
+
 }
 
 .HeaderSpan {
@@ -147,15 +147,6 @@ header {
     font-weight: 600;
     font-size: 22px;
 }
-
-.Photo {
-    background-image: url();
-    width: 130px;
-    height: 130px;
-    border-radius: 100%;
-    border: 1px solid #676767;
-}
-
 .Photo img {
 
     width: 130px;
@@ -163,7 +154,6 @@ header {
     border-radius: 100%;
     border: 1px solid #676767;
 }
-
 
 main {
     display: flex;
@@ -218,7 +208,7 @@ nav {
   }
 
   .IconDescription{
-    font-family: 'Roboto';
+   font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 12px;
 }

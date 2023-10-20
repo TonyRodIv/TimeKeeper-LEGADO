@@ -42,12 +42,13 @@ fetch('../src/data.json')
         infoAulas.sort((a, b) => a.id - b.id);
         const regras = JSON.stringify(regrasGPT);
         const aulas = JSON.stringify(infoAulas);
-        // console.log(texto);
+        
         console.log(infoAulas);
 
         let homeQuestionI = localStorage.getItem('homeQuestion')
         localStorage.removeItem('homeQuestion');
         if (homeQuestionI === null) {
+        
             
         } else {
             inputQuestion.value = `${homeQuestionI}`;
@@ -64,7 +65,6 @@ fetch('../src/data.json')
             console.log('ola')
             const modalERR = document.getElementById("modalERR");
             modalERR.style.display = 'inline-flex';
-            // let newKey = window.prompt("Digite uma nova chave API \n Não se preocupe, essa chave não será salva pelo site")
         });
         const goChat = document.getElementById("goChat");
         goChat.addEventListener("click", () => {
@@ -123,7 +123,7 @@ fetch('../src/data.json')
                     inputQuestion.focus();
                 });
 
-            // if (result.value) result.value += "\n\n\n";
+            
 
             writeChat.innerHTML += `
             <section class="resultU">
@@ -134,7 +134,7 @@ fetch('../src/data.json')
             
             `;
             inputQuestion.value = "";
-            // inputQuestion.disabled = true;
+            
         }
     });
 

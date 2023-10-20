@@ -10,18 +10,26 @@ body {
   height: 90vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-image: url(../img/BACK.svg);
+    background-size: cover;
 }
 
 main {
-  height: 100%;
-  background: linear-gradient(180deg, #FEFEFE 13.14%, #CCDDF7 100%);
+  height: 100vh;
+  /* background: linear-gradient(180deg, #FAFAFA 13.14%, #A8BFE0 100%); */
 }
 
 header {
-  display: flex;
+  display: grid;
   align-items: center;
   padding-top: 1.5rem;
   padding-bottom: 5px;
+    width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  background: linear-gradient(180deg, rgba(254, 254, 254, 0.90) 0%, rgba(254, 254, 254, 0.00) 100%);
+
+backdrop-filter: blur(25px);
 }
 
 /* MODAL ERRO */
@@ -46,7 +54,7 @@ header {
   box-shadow: 5px 5px 250px 1000px #fefefec7;
   backdrop-filter: blur(50px);
   border: 1px solid rgb(206, 206, 206);
-  font-family: 'Poppins';
+font-family: 'Poppins', sans-serif;
 }
 
 .headModal {
@@ -56,7 +64,7 @@ header {
 
   color: #282828;
   font-size: 20px;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -66,7 +74,7 @@ header {
   color: #282828;
   text-align: justify;
   font-size: 14px;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -88,7 +96,7 @@ header {
   color: #FFF;
   text-align: center;
   font-size: 15px;
-  font-family: 'Roboto';
+font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -108,7 +116,7 @@ header {
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
-  font-family: 'Roboto';
+font-family: 'Roboto', sans-serif;
   line-height: normal;
 }
 
@@ -125,42 +133,13 @@ header {
   margin: 20px;
 }
 
-ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-li {
-  display: flex;
-  padding: 20px;
-  max-width: 350px;
-  gap: 1rem;
-  justify-content: space-evenly;
-
-}
-
-li img {
-  height: 60%;
-  margin: 2px;
-}
 
 hr {
   width: 320px;
   border: 0.5px solid rgba(0, 0, 0, 0.3);
 }
 
-header {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(25px);
-}
+
 header a img{
   width: 25px;
   transform: rotate(180deg);
@@ -197,59 +176,10 @@ header a img{
   max-height: 62px;
 }
 
-/* BARRA DE NAVEGAÇÃO */
-nav {
-    /* display: none; */
-    position: fixed;
-    bottom: 0;
-    padding: 10px 0px;
-    max-height: 150px;
-    min-height: 55px;
-    width: 100%;
-    background: #f5f5f5;
-
-  
-    /* backdrop-filter: blur(25px); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-  }
-  .navIcons {
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0px 10px;
-    list-style: none;
-  } 
-  .Icon{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.Icon img {
-    width: 15%;
-    max-width: 45px;
-    min-width: 25px;
-    background-color: none;
-    
-
-  }
-
-  .IconDescription{
-    font-family: 'Roboto';
-    font-weight: 600;
-    font-size: 12px;
-}
-
 
 .search {
   width: 85%;
-  max-width: 355px;
+  max-width: zpx;
   height: 60px;
   position: relative;
   animation: slideInFromBottom 0.5s ease-out;
@@ -264,29 +194,26 @@ nav {
   min-width: 331px;
   width: 100%;
   height: 100%;
-  background: #fbfbfbb0;
-  border: 1px solid #d8d8d86b;
-  border-radius: 15px;
-
-  /* background-image: url(../img/Icons/search.svg);
-  background-repeat: no-repeat;
-  background-position: 15px; */
-  padding-left: 60px;
+  background: rgba(255, 255, 255, 0.61);
+  border-radius: 40px;
+  padding-left: 30px;
   padding-right: 5px;
-
-  font-family: 'Roboto Flex';
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
-  color: #888888;
   overflow: auto;
+  border: none;
 }
 
 .IADisabledSearch {
   position: absolute;
   bottom: 17px;
-  left: 10px;
+  right: 30px;
+
 }
+
+
 
 #result {
   max-width: 300px;
@@ -296,7 +223,7 @@ nav {
   border: 1px solid #DAE3F1;
   border-radius: 20px 20px 20px 6px;
 
-  font-family: 'Roboto Flex';
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -308,10 +235,11 @@ nav {
   max-width: 300px;
   min-height: 60px;
   padding: 10px;
-  background: linear-gradient(92.28deg, #1F3E6D 5.31%, #627899 97.95%);
+  background: linear-gradient(92.28deg, #344394 5.31%, #4583BC 97.95%);
+
 border-radius: 20px 20px 6px 20px;
 
-  font-family: 'Roboto Flex';
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -358,6 +286,56 @@ border-radius: 20px 20px 6px 20px;
   width: 100%;
   height: 150px;
 }
+
+/* BARRA DE NAVEGAÇÃO */
+nav {
+    /* display: none; */
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0px;
+    max-height: 150px;
+    min-height: 55px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0.00) 0.36%, rgba(255, 255, 255, 0.50) 81.09%);
+
+backdrop-filter: blur(25px);
+
+  
+    /* backdrop-filter: blur(25px); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+  .navIcons {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 10px;
+    list-style: none;
+  } 
+  .Icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.Icon img {
+    width: 20%;
+    max-width: 45px;
+    min-width: 20px;
+   
+  }
+
+  .IconDescription{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+
 
 
 @keyframes aparecer {
