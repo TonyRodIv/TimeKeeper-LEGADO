@@ -159,23 +159,33 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 8px;
 }
 
-.navIcons {
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0px 10px;
+ .navIcons {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 10px;
+    list-style: none;
+  } 
+  .Icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Icon img {
+        width: 15%;
+    max-width: 45px;
+    min-width: 25px;
+  }
+
+  .IconDescription{
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 12px;
 }
 
-.navIcons a {
-  width: 5%;
-  min-width: 35px;
-}
-
-.navIcons a img {
-  width: 100%;
-  max-width: 45px;
-}
