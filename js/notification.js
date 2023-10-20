@@ -12,17 +12,17 @@ fetch('../src/notification.json')
       }
     }
 
-    for (let i = 0; i < notification.length; i++) {
+    for (const element of notification) {
       WriteNotification.innerHTML += `
-      <h2 class="Data">${notification[i].data}</h2>
+      <h2 class="Data">${element.data}</h2>
       <ul id="Notification">
       <li class="NotificationText">
           <div class="bellBackground">
             <img src="../img/Icons/Bell.svg" alt="" srcset="">
           </div>
           <div class="textWraper">
-          <h2 class="NotificationTitle">${notification[i].titulo}</h2>
-            <p class="Description">${notification[i].descricao}</p>
+          <h2 class="NotificationTitle">${element.titulo}</h2>
+            <p class="Description">${element.descricao}</p>
             </div>
         </li>
         <hr>
