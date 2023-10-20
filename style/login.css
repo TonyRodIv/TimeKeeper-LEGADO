@@ -145,7 +145,7 @@ footer{
     background: rgba(251, 251, 251, 0.90);
     box-shadow: 5px 5px 250px 1000px rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(50px);
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
   }
   
   .headModal {
@@ -155,7 +155,7 @@ footer{
   
     color: #282828;
     font-size: 20px;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -165,7 +165,7 @@ footer{
     color: #282828;
     text-align: justify;
     font-size: 14px;
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -193,6 +193,7 @@ footer{
     border: none;
   }
   
+  
   .buttonGoAway {
     width: 302px;
     height: 40px;
@@ -206,7 +207,7 @@ footer{
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     line-height: normal;
   }
   
