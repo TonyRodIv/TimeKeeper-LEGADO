@@ -71,7 +71,7 @@ header {
 .search {
     width: 85%;
     max-width: 355px;
-    height: 60px;
+    height: 70px;
     position: relative;
 }
 
@@ -84,16 +84,15 @@ header {
     border-radius: 30px;
     padding-left: 55px;
 
-    font-style: normal;
-    font-weight: 500;
+    /* font-style: normal; */
+    /* font-weight: 600; */
     font-size: 17px;
    color: #888888;
-
 }
 
 .IADisabledSearch {
     position: absolute;
-    bottom: 18px;
+    bottom: 23px;
     left: 25px;
 }
 .moreClasses{
@@ -177,7 +176,7 @@ nav {
 }
 
 .Icon img {
-    width: 15%;
+    width: 20%;
     max-width: 45px;
     min-width: 20px;
    
