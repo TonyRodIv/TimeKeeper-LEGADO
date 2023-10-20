@@ -35,7 +35,7 @@ header {
 .iconTK {
     width: 60px;
     height: 60px;
-    background: #E2E8F2;
+    background: #112940;
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -44,18 +44,15 @@ header {
 
 .pfpUser {
     border-radius: 100%;
-    filter: drop-shadow(2px 5px 20px #cad5e673);
-    border-radius: 20px;
+    /* filter: drop-shadow(2px 5px 20px #cad5e673); */
     width: 60px;
 }
 
 .welcomeText {
-    font-family: 'Roboto Slab';
     width: 85%;
 }
 
 .greetings {
-    font-family: 'Roboto Slab';
     font-weight: 400;
     font-size: 21px;
     color: #828282;
@@ -87,7 +84,6 @@ header {
     border-radius: 30px;
     padding-left: 55px;
 
-    font-family: 'Roboto Flex';
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
@@ -105,7 +101,6 @@ header {
     margin: 15px 0px 10px 0px;
 }
 .moreClasses a {
-    font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
@@ -191,7 +186,7 @@ nav {
   }
 
   .IconDescription{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 12px;
 }

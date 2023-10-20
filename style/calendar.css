@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 body {
-  font-family: roboto;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   user-select: none;
 }
@@ -9,6 +9,8 @@ body {
 main {
   padding-top: 170px;
   padding-bottom: 50px;
+  height: 100vh;
+  overflow: auto;
 }
 
 .meses-carousel{
@@ -28,9 +30,7 @@ main {
   overflow: auto;
   justify-content: center;
 }
-.dias-carousel{
-  overflow: hidden;
-}
+
 
 .navSpace{
   width: 100%;
@@ -42,11 +42,10 @@ main {
   padding: 10px;
   border: 1px solid #cccccc4b;
   cursor: pointer;
-  font-family: Poppins;
+ font-family: 'Poppins', sans-serif;
   font-size: 15pt;
   font-weight: 700;
   text-align: center;
-  border: none;
   background-color: transparent;
   color: #696969;
   /* min-width: 120px; */
@@ -55,7 +54,7 @@ main {
 
 
 .dia {
-  font-family: Roboto;
+ font-family: 'Roboto', sans-serif;
   font-size: 20px;
   border-radius: 10px;
   padding: 2px;
@@ -85,14 +84,14 @@ header {
 
 
 .titleCard {
-  font-family: 'Poppins';
+font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 23px;
 }
 
 .titleCardAD {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
@@ -128,10 +127,7 @@ header {
   flex-direction: column;
   align-items: center;
 }
-main {
-  height: 100vh;
-  overflow: auto;
-}
+
 
 .teacherImg {
   width: 30px;
@@ -185,7 +181,7 @@ nav {
   }
 
   .IconDescription{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 12px;
 }
