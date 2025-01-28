@@ -1,7 +1,7 @@
 
 # Avisos
 
-- Esse repositório foi descontinuado e será reconstruido do zero utilizando React Vite
+- Esse repositório contém muitos erros e bugs em seu código e por isso foi descontinuado e será reconstruido do zero utilizando React Vite
 - Acompanhe as alterações mais recentees em [TimeKeeper React](https://github.com/TonyRodIv/TimeKeeperREACT)
 
 
