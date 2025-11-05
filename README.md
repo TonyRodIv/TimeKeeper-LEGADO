@@ -2,7 +2,8 @@
 # Avisos
 
 - Esse repositório contém muitos erros e bugs em seu código e por isso foi descontinuado e será reconstruido do zero utilizando React Vite
-- Acompanhe as alterações mais recentees em [TimeKeeper React](https://github.com/TonyRodIv/TimeKeeperREACT)
+- Atualização: o deesenvolvimento da nova versão do Timekeeeper foi temporariamente paudado
+- Em breve acompanhe as alterações mais recentes em [TimeKeeper React](https://github.com/TonyRodIv/TimeKeeperREACT)
 
 
 
