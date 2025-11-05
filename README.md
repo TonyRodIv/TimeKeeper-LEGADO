@@ -4,6 +4,7 @@
 - Esse repositório contém muitos erros e bugs em seu código e por isso foi descontinuado e será reconstruido do zero utilizando React Vite
 - Atualização: o deesenvolvimento da nova versão do Timekeeeper foi temporariamente paudado
 - Em breve acompanhe as alterações mais recentes em [TimeKeeper React](https://github.com/TonyRodIv/TimeKeeperREACT)
+- Veja o Futuro design do Timekeeper em:[TimeKeeper Protótipo](https://www.figma.com/design/ngHcqDrzfZ7VfrzydOwrC3/PROJETO-INTEGRADOR---1%C2%BA-SEMESTRE---TIMEKEEPER?node-id=14-2)
 
 
 
